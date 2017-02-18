@@ -6,7 +6,6 @@ var gulp = require('gulp'),
 	autoprefixer = require('autoprefixer'),
 	cssnano = require('cssnano'),
 	jshint = require('gulp-jshint'),
-	livereload = require('gulp-livereload'),
 	postcss = require('gulp-postcss'),
 	rename = require('gulp-rename'),
 	sass = require('gulp-sass'),
@@ -40,8 +39,7 @@ gulp.task('scripts', function() {
 		}))
 		.pipe(rename('main.min.js'))
 		.pipe(sourcemaps.write('./'))
-		.pipe(gulp.dest('wp-content/themes/myblog/dist/js/'))
-		.pipe(livereload());
+		.pipe(gulp.dest('wp-content/themes/myblog/dist/js/'));
 });
 
 
@@ -61,8 +59,7 @@ gulp.task('styles', function() {
 		.pipe(postcss(processors))
 		.pipe(rename('main.min.css'))
 		.pipe(sourcemaps.write('./'))
-		.pipe(gulp.dest('wp-content/themes/myblog/dist/css'))
-		.pipe(livereload());
+		.pipe(gulp.dest('wp-content/themes/myblog/dist/css'));
 });
 
 
@@ -70,7 +67,6 @@ gulp.task('styles', function() {
 
 // currently each task is independent so each type of file will need to be saved once to perform actions
 gulp.task('watch', function() {
-	livereload.listen({ quiet: true }); // disable console log of reloaded files
 	gulp.watch('wp-content/themes/myblog/sass/**', ['styles']);
 	gulp.watch('wp-content/themes/myblog/js/main.js', ['jshint', 'scripts']);
 });
