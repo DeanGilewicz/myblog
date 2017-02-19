@@ -1,0 +1,102 @@
+html,
+body {
+	background-color: rgba(0,0,0,0);
+	background-color: transparent;
+}
+
+body {
+	-webkit-font-smoothing: antialiased;
+	font-family: $font_opensans;
+	font-size: $base_font_size*1.4;
+	color: $text;
+
+	@media (min-width: $medium) {
+		font-size: $base_font_size*1.6;
+	}
+}
+
+ol,
+ul,
+li,
+a,
+span {
+	font-size: $base_font_size*1.4;
+
+	@media (min-width: $medium) {
+		font-size: $base_font_size*1.6;
+	}
+}
+
+p {
+	font-size: $base_font_size*1.4;
+
+	@media (min-width: $medium) {
+		font-size: $base_font_size*1.6;
+	}
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: $font_hind;
+}
+
+a {
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	-webkit-tap-highlight-color: transparent;
+	color: $link;
+	cursor: pointer;
+	outline: none;
+	text-decoration: none;
+
+	&:active,
+	&:hover {
+		color: lighten($link, 10%);
+	}
+
+}
+
+img {
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	-webkit-tap-highlight-color: transparent;
+}
+
+
+.clearfix:before,
+.clearfix:after {
+	content: " ";
+	display: table;
+}
+
+.clearfix:after {
+	clear: both;
+}
+
+.button {
+	text-decoration: none;
+	display: inline-block;
+	margin: $base_size 0;
+	padding: $base_size*0.5 $base_size;
+	border: 1px solid $white;
+	text-align: center;
+	color: $white;
+	
+
+	@media (min-width: $medium) {
+		
+	}
+
+	&:hover,
+	&:active,
+	&:focus {
+		
+	}
+}
+
+
+
+

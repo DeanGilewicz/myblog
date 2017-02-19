@@ -1,3 +1,20 @@
-body {
-	background-color: red;
-}
+// External
+@import "normalize";
+// @import "genericons";
+
+// Global
+@import "fonts";
+@import "variables";
+@import "global";
+
+// partials
+@import "header";
+@import "footer";
+
+// specific pages
+
+// post types
+
+// taxonomies
+
+
