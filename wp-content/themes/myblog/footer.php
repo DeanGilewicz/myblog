@@ -54,6 +54,8 @@
 
 </div><!-- .site -->
 
+<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/dist/js/main.min.js"></script>
+
 <?php wp_footer(); ?>
 
 </body>
