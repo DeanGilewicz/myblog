@@ -17,7 +17,10 @@ $xlarge: 1440px;
 
 $black: #000000;
 
-$text: #333333;
+$grey_dark: #212121;
+$grey: #333333;
+
+$text: $grey;
 
 $white: #ffffff;
 
@@ -29,7 +32,7 @@ $link: $text;
 
 // FONT SIZE
 
-$base_font_size: 10px;
+$base_font_size: 16px;
 
 
 

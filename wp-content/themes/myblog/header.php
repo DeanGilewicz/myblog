@@ -25,30 +25,77 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed site">
+	
 	<!-- <a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'myblog' ); ?></a> -->
+	
+	<div class="container_global_menu">
 
-	<div id="sidebar" class="sidebar">
-		<header id="masthead" class="site-header" role="banner">
-			<div class="site-branding">
-				<?php
-					// twentyfifteen_the_custom_logo();
+		<nav>
 
-					if ( is_front_page() && is_home() ) : ?>
-						<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-					<?php else : ?>
-						<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-					<?php endif;
+			<form role="search" method="get" class="search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+				<label>
+					<!-- <span class="screen-reader-text"><?php echo _x( 'Search for:', 'label', 'myblog' ); ?></span> -->
+					<input type="search" class="search-field" placeholder="<?php echo esc_attr_x( 'Search &hellip;', 'placeholder', 'myblog' ); ?>" value="<?php echo get_search_query(); ?>" name="s" title="<?php echo esc_attr_x( 'Search for:', 'label', 'myblog' ); ?>" />
+				</label>
+				<button type="submit" class="search-submit button">
+					<span class="screen-reader-text"><?php echo _x( 'Search', 'submit button', 'myblog' ); ?></span>
+				</button>
+			</form>
 
-					$description = get_bloginfo( 'description', 'display' );
-					if ( $description || is_customize_preview() ) : ?>
-						<p class="site-description"><?php echo $description; ?></p>
-					<?php endif;
-				?>
-				<button class="secondary-toggle"><?php _e( 'Menu and widgets', 'myblog' ); ?></button>
-			</div><!-- .site-branding -->
-		</header><!-- .site-header -->
+	        <ul>
+	            <li>
+	                <a href="">root</a>
+	            </li>
+	            <li>
+	                <a href="">html</a>
+	            </li>
+	            <li>
+	                <a href="">css</a>
+	            </li>
+	            <li>
+	                <a href="">js</a>
+	            </li>
+	            <li>
+	                <a href="">php</a>
+	            </li>
+	            <li>
+	                <a href="">assets</a>
+	            </li>
+	            <li>
+	                <a href="">dist</a>
+	            </li>
+	        </ul>
+	    </nav>
 
-		<?php get_sidebar(); ?>
-	</div><!-- .sidebar -->
+		<div id="sidebar" class="sidebar">
+			<header id="masthead" class="site-header" role="banner">
+
+			    <!--
+				<div class="site-branding">
+					<?php
+						// twentyfifteen_the_custom_logo();
+
+						if ( is_front_page() && is_home() ) : ?>
+							<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+						<?php else : ?>
+							<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+						<?php endif;
+
+						$description = get_bloginfo( 'description', 'display' );
+						if ( $description || is_customize_preview() ) : ?>
+							<p class="site-description"><?php echo $description; ?></p>
+						<?php endif;
+					?>
+					<button class="secondary-toggle"><?php _e( 'Menu and widgets', 'myblog' ); ?></button>
+				</div>--><!-- .site-branding -->
+
+			</header><!-- .site-header -->
+
+			<?php get_sidebar(); ?>
+		</div><!-- .sidebar -->
+
+	</div>
 
 	<div id="content" class="site-content">
+
+		<div class="js-trigger-menu"></div>
