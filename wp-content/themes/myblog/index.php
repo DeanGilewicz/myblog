@@ -37,52 +37,56 @@
 
 			</div>
 
-			<div class="dg_grid_container">
+			<div class="container_main_content">
 
-				<div class="dg_grid_row">
+				<div class="dg_grid_container">
 
-					<div class="dg_grid_col col_12">
+					<div class="dg_grid_row">
 
-						<?php if ( have_posts() ) : ?>
+						<div class="dg_grid_col col_12">
 
-							<?php if ( is_home() && ! is_front_page() ) : ?>
-								<header>
-									<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-								</header>
-							<?php endif; ?>
+							<?php if ( have_posts() ) : ?>
 
-							<?php
-							// Start the loop.
-							while ( have_posts() ) : the_post();
+								<!--<?php if ( is_home() && ! is_front_page() ) : ?>
+									<header>
+										<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
+									</header>
+								<?php endif; ?>-->
 
-								/*
-								 * Include the Post-Format-specific template for the content.
-								 * If you want to override this in a child theme, then include a file
-								 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-								 */
-								get_template_part( 'content', get_post_format() );
+								<?php
+								// Start the loop.
+								while ( have_posts() ) : the_post();
 
-							// End the loop.
-							endwhile;
+									/*
+									 * Include the Post-Format-specific template for the content.
+									 * If you want to override this in a child theme, then include a file
+									 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
+									 */
+									get_template_part( 'content', get_post_format() );
 
-							// Previous/next page navigation.
-							the_posts_pagination( array(
-								'prev_text'          => __( 'Previous page', 'myblog' ),
-								'next_text'          => __( 'Next page', 'myblog' ),
-								'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'myblog' ) . ' </span>',
-							) );
+								// End the loop.
+								endwhile;
 
-						// If no content, include the "No posts found" template.
-						else :
-							get_template_part( 'content', 'none' );
+								// Previous/next page navigation.
+								the_posts_pagination( array(
+									'prev_text'          => __( 'Previous page', 'myblog' ),
+									'next_text'          => __( 'Next page', 'myblog' ),
+									'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'myblog' ) . ' </span>',
+								) );
 
-						endif;
-						?>
+							// If no content, include the "No posts found" template.
+							else :
+								get_template_part( 'content', 'none' );
+
+							endif;
+							?>
+
+						</div>
 
 					</div>
-
+					
 				</div>
-				
+
 			</div>
 
 		</main><!-- .site-main -->

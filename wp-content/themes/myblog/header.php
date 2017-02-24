@@ -99,18 +99,22 @@
 
 	<div id="content" class="site-content">
 
-		<!-- <div class="dg_grid_container">
+		<div class="container_main_header">
 
-			<div class="dg_grid_row">
+			<div class="dg_grid_container">
 
-				<div class="dg_grid_col col_2"> -->
-					<div class="js-trigger-menu"></div>
-				<!-- </div>
+				<div class="dg_grid_row">
 
-				<div class="dg_grid_col col_10">
-					<div class="logo_site">blog.deangilewicz.com</div>
+					<div class="dg_grid_col col_2">
+						<div class="js-trigger-menu"></div>
+					</div>
+
+					<div class="dg_grid_col col_10">
+						<div class="logo_site">blog.deangilewicz.com</div>
+					</div>
+
 				</div>
 
 			</div>
 
-		</div> -->
+		</div>

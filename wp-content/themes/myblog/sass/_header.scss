@@ -8,7 +8,6 @@
 
 	@media (min-width: $medium) {
 		margin-left: 15.625rem;
-		// overflow: hidden;
 	}
 }
 
@@ -81,6 +80,11 @@
 		padding: 0;
 	}
 
+}
+
+.container_main_header {
+	background-color: $black;
+	color: $white;
 }
 
 .js-trigger-menu {
