@@ -8,6 +8,7 @@
 
 	@media (min-width: $medium) {
 		margin-left: 15.625rem;
+		// overflow: hidden;
 	}
 }
 
@@ -85,9 +86,15 @@
 .js-trigger-menu {
 	width: 30px;
 	height: 30px;
+	// vertical-align: middle;
 	background: red;
 
 	@media (min-width: $medium) {
 		display: none;
 	}
+}
+
+.logo_site {
+	display: block;
+	text-align: center;
 }

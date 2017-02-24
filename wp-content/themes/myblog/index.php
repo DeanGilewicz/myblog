@@ -20,6 +20,23 @@
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
+			<div class="container_hero">
+
+				<div class="dg_grid_container">
+
+					<div class="dg_grid_row">
+
+						<div class="dg_grid_col col_12">
+							<h1><?php echo get_bloginfo('name'); ?></h1>
+							<p><?php echo get_bloginfo('description'); ?></p>
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+
 			<div class="dg_grid_container">
 
 				<div class="dg_grid_row">
