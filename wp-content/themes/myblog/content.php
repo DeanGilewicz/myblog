@@ -35,8 +35,6 @@
 			<div class="post_author">
 				<span>Written by <span><?php the_author(); ?></span></span>
 			</div>
-
-
 			
 		</header><!-- .entry-header -->
 
@@ -48,24 +46,48 @@
 
 			<?php
 				/* translators: %s: Name of current post */
-				the_content( sprintf(
-					__( 'Continue reading %s', 'myblog' ),
-					the_title( '<span class="screen-reader-text">', '</span>', false )
-				) );
+				// the_content( sprintf(
+				// 	__( 'Continue reading %s', 'myblog' ),
+				// 	the_title( '<span class="screen-reader-text">', '</span>', false )
+				// ) );
+				the_excerpt();
 
-				wp_link_pages( array(
-					'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'myblog' ) . '</span>',
-					'after'       => '</div>',
-					'link_before' => '<span>',
-					'link_after'  => '</span>',
-					'pagelink'    => '<span class="screen-reader-text">' . __( 'Page', 'myblog' ) . ' </span>%',
-					'separator'   => '<span class="screen-reader-text">, </span>',
-				) );
+				// wp_link_pages( array(
+				// 	'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'myblog' ) . '</span>',
+				// 	'after'       => '</div>',
+				// 	'link_before' => '<span>',
+				// 	'link_after'  => '</span>',
+				// 	'pagelink'    => '<span class="screen-reader-text">' . __( 'Page', 'myblog' ) . ' </span>%',
+				// 	'separator'   => '<span class="screen-reader-text">, </span>',
+				// ) );
 			?>
+
+			<a href="<?php the_permalink(); ?>" class="button">Read more</a>
+
 		</div><!-- .entry-content -->
 
 		<footer class="entry-footer">
-			<?php edit_post_link( __( 'Edit', 'myblog' ), '<span class="edit-link">', '</span>' ); ?>
+
+			<div class="post_type">
+				<i class="genericon genericon-pinned"></i>
+			</div>
+
+			<span class="post_cats">
+				<?php foreach ( get_the_category() as $cat ) : ?>
+					<?php 
+						$category_name  = $cat->cat_name;
+						$category_link  = get_category_link( $cat->cat_ID );
+					?>
+					<a href="<?php echo esc_url( $category_link ); ?>" title="<?php echo esc_attr( $category_name ); ?>"><?php echo esc_html( $category_name ); ?></a>
+				<?php endforeach; ?>
+			</span>
+
+			<span class="post_comments">
+				<a href="<?php echo get_comments_link( $post->ID ); ?>"><?php comments_number(); ?></a>
+			</span>
+
+			<!-- <?php edit_post_link( __( 'Edit', 'myblog' ), '<span class="edit-link">', '</span>' ); ?> -->
+		
 		</footer><!-- .entry-footer -->
 
 	</div>

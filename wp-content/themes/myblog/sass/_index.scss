@@ -12,18 +12,30 @@ body.home {
 		padding-bottom: $base_size*2;
 	}
 
-	.entry-header,
+	.entry-header {
+		padding-top: $base_size;
+		padding-bottom: $base_size;
+	}
+
 	.entry-content,
 	.entry-footer {
 		padding: $base_size;
 	}
 
+	.entry-title,
+	.post_author {
+		padding-left: $base_size;
+		padding-right: $base_size;
+	}
+
 	article .container_post {
-		background-color: $white;
+		margin-bottom: $base_size*2;
 		border: 1px solid darken($grey_light, 5%);
+		background-color: $white;
 	
 		.post_meta {
-			padding-bottom: $base_size;
+			padding-top: $base_size;
+			padding-bottom: $base_size*2;
 			border-bottom: 1px solid darken($grey_light, 5%);
 			text-transform: uppercase;
 			text-align: center;
@@ -36,7 +48,7 @@ body.home {
 		}
 
 		.post_title {
-			margin: $base_size 0 $base_size*0.5;
+			margin: $base_size*2 0 $base_size;
 
 			.entry-title {
 				margin: 0;
@@ -49,6 +61,8 @@ body.home {
 		}
 
 		.post_author {
+			margin-top: $base_size;
+			margin-bottom: $base_size;
 
 			span > span {
 				color: $orange;
@@ -64,6 +78,33 @@ body.home {
 			}
 		}
 
+		.entry-content {
+			border-bottom: 1px solid darken($grey_light, 5%);
+		}
+
 	}
+
+	.container_page_nav {
+		padding: $base_size;
+		border: 1px solid darken($grey_light, 5%);
+		background-color: $white;
+
+		.page_number {
+			display: inline-block;
+			margin-right: $base_size*0.6;
+    		padding: $base_size*0.6 $base_size*1.4;
+    		background-color: $grey_light;
+    		transition:
+    			background-color 0.4s ease,
+    			color 0.4s ease;
+
+    		&.current,
+    		&:hover {
+    			background-color: $orange;
+    			color: $white;
+    		}
+
+		}
+	} 
 
 }
