@@ -16,24 +16,28 @@
 		
 		<header class="entry-header">
 
-			<div class="post_meta">
+			<div class="post_date">
 				<span><?php the_time('j'); ?></span>
 				<span><?php the_time('F'); ?></span>
 				<span><?php the_time('Y'); ?></span>
 			</div>
 
-			<div class="post_title">
-				<?php
-				if ( is_single() ) :
-					the_title( '<h1 class="entry-title">', '</h1>' );
-				else :
-					the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' );
-				endif;
-			?>
-			</div>
+			<div class="container_post_meta">
+				
+				<div class="post_title">
+					<?php
+					if ( is_single() ) :
+						the_title( '<h1 class="entry-title">', '</h1>' );
+					else :
+						the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' );
+					endif;
+				?>
+				</div>
 
-			<div class="post_author">
-				<span>Written by <span><?php the_author(); ?></span></span>
+				<div class="post_author">
+					<span>Written by <span><?php the_author(); ?></span></span>
+				</div>
+
 			</div>
 			
 		</header><!-- .entry-header -->
