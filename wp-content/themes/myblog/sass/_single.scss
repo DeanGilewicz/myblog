@@ -1,0 +1,119 @@
+body.single {
+
+	.container_main_content {
+		padding-top: $base_size*2;
+		padding-bottom: $base_size*2;
+	}
+
+	article .container_post {
+		margin-bottom: $base_size*2;
+		border: 1px solid darken($grey_light, 5%);
+		background-color: $white;
+
+		.post_feature_img {
+
+			img {
+				max-width: 100%;
+				height: 180px;
+			}
+		}
+
+		.entry-header,
+		.entry-content,
+		.entry-footer {
+			padding-left: $base_size;
+			padding-right: $base_size;
+		}
+	
+		.post_date {
+			padding-top: $base_size*2;
+			padding-bottom: $base_size*2;
+			border-bottom: 1px solid darken($grey_light, 5%);
+			text-transform: uppercase;
+			text-align: center;
+
+			@media (min-width: $medium) {
+				display: table-cell;
+				width: 22%;
+				max-width: $base_size*9;
+				padding: $base_size;
+				border-right: 1px solid darken($grey_light, 5%);
+				border-bottom: none;
+			}
+
+			span {
+				font-size: $base_font_size;
+
+				@media (min-width: $medium) {
+					display: block;
+				}
+
+				&:first-child {
+					display: block;
+					font-size: $base_font_size*1.8;
+					font-weight: 700;
+				}
+			}
+
+		}
+
+		.container_post_meta {
+			border-bottom: 1px solid darken($grey_light, 5%);
+
+			@media (min-width: $medium) {
+				display: table-cell;
+				width: 68%;
+				width: calc(100% - 130px); // includes 40px padding
+				padding-top: $base_size;
+				vertical-align: top;
+			}
+		}
+
+		.post_title {
+			margin: $base_size*2 0 $base_size;
+
+			@media (min-width: $medium) {
+				display: inline-block;
+				margin: 0;
+			}
+
+			.entry-title {
+				margin: 0;
+			}
+
+			a {
+				font-size: $base_font_size*1.6;
+			}
+
+		}
+
+		.post_author {
+			margin-top: $base_size;
+			margin-bottom: $base_size;
+
+			@media (min-width: $medium) {
+				margin-top: 0;
+			}
+
+			span {
+				font-size: $base_font_size*0.9;
+			}
+
+			span > span {
+				color: $orange;
+			}
+
+		}
+
+		.entry-content {
+			border-bottom: 1px solid darken($grey_light, 5%);
+		}
+
+		.entry-footer {
+			padding-top: $base_size*2;
+			padding-bottom: $base_size*2;
+		}
+
+	}
+
+}

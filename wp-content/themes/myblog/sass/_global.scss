@@ -129,3 +129,21 @@ img {
 }
 
 
+.nav_crumb {
+	margin-bottom: $base_size*2;
+	padding: $base_size*2;
+    border: 1px solid darken($grey_light, 5%);
+    background-color: $white;
+}
+
+.nav_crumb a,
+.nav_crumb span {
+	font-size: $base_font_size*0.8;
+    text-transform: uppercase;
+}
+
+.nav_crumb .current {
+	color: $orange;
+}
+
+
