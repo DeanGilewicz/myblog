@@ -19,7 +19,7 @@
 	height: 100%;
 	padding-top: $base_size*2;
 	padding-bottom: $base_size*2;
-	background: $grey_dark;
+	background-color: $grey_dark;
     transform: translate3d(-100%, 0, 0);
 	transition: transform 200ms ease-in;
 
@@ -55,35 +55,10 @@
 	    background: darken($grey_dark, 10%);
 	}
 
-	.search-form {
-		position: relative;
-		width: 100%;
-		padding: $base_size*1.2 $base_size*1.5;
-		box-sizing: border-box;
-	}
-
-	.search-form input {
-		outline: none;
-		width: 100%;
-		padding: $base_size*0.4 $base_size*0.8 $base_size*0.4 $base_size*3.4;
-		font-size: $base_font_size;
-	}
-
-	.search-form button[type="submit"] {
-		outline: none;
-		position: absolute;
-		top: 13px;
-		// left: 0;
-		width: 30px;
-		height: 30px;
-		margin: 0;
-		padding: 0;
-	}
-
 }
 
 .container_main_header {
-	background-color: $black;
+	background-color: $grey_dark;
 	color: $white;
 }
 

@@ -105,6 +105,18 @@ body.home {
     		}
 
 		}
+	}
+
+	.container_search {
+		margin-top: $base_size*4;
+		margin-bottom: $base_size*2;
+		border: 1px solid darken($grey_light, 5%);
+		background-color: $white;
+
+		.search-form input {
+			border: none;
+			background-color: $grey_light;
+		}
 	} 
 
 }

@@ -1,6 +1,44 @@
-footer {
-	
-	@media (min-width: $medium) {
+footer.site-footer {
+	// padding-top: $base_size*2;
+	// background-color: $grey_dark;
+
+	.container_sidebar_two,
+	.container_sidebar_three {
+		margin-bottom: $base_size*2;
+
+		h2 {
+			font-size: $base_font_size;
+			text-transform: uppercase;
+		}
+
+		ul {
+			list-style-type: square;
+			margin: 0 0 0 $base_size*2;
+			padding: $base_size 0 0 0;
+		}
+
+		li {
+			margin: 0 0 $base_size;
+    		padding: 0 0 $base_size;
+    		border-bottom: 1px solid darken($grey_light, 5%);
+			font-size: $base_font_size*0.9;
+		}
+
+		li a {
+			font-size: $base_font_size*0.9;
+		}
+
+		.widget_categories,
+		.widget_tag_cloud,
+		.widget_archive {
+			padding: $base_size;
+			border: 1px solid darken($grey_light, 5%);
+			background-color: $white;
+		}
+
+		.widget_categories {
+			margin-bottom: $base_size*2;
+		}
 
 	}
 
