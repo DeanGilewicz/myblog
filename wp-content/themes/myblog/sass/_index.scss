@@ -131,29 +131,6 @@ body.home {
 
 	}
 
-	.container_page_nav {
-		padding: $base_size;
-		border: 1px solid darken($grey_light, 5%);
-		background-color: $white;
-
-		.page_number {
-			display: inline-block;
-			margin-right: $base_size*0.6;
-    		padding: $base_size*0.6 $base_size*1.4;
-    		background-color: $grey_light;
-    		transition:
-    			background-color 0.4s ease,
-    			color 0.4s ease;
-
-    		&.current,
-    		&:hover {
-    			background-color: $orange;
-    			color: $white;
-    		}
-
-		}
-	}
-
 	.container_search {
 		margin-top: $base_size*4;
 		margin-bottom: $base_size*2;

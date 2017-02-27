@@ -1,0 +1,84 @@
+.comments-area {
+
+	textarea {
+	    min-height: 100px;
+	}
+
+	textarea,
+	input {
+		outline: none;
+		box-sizing: border-box;
+		width: 100%;
+		max-width: $medium;
+		padding: $base_size;
+		background-color: $grey_light;
+		border: 1px solid darken($grey_light, 5%);
+	}
+
+	label {
+		display: block;
+		font-size: $base_font_size*0.8;
+		text-transform: uppercase;
+
+		span {
+			vertical-align: top;
+			color: $red;
+		}
+	}
+
+	input[type="submit"] {
+		background-color: $orange;
+		
+		&:hover,
+		&:active,
+		&:focus {
+			background-color: $black;
+			color: $white;
+		}
+
+	}
+
+	.dg_grid_row {
+		padding-top: $base_size*2;
+		padding-bottom: $base_size*2;
+		background-color: $white;
+		border: 1px solid darken($grey_light, 5%);
+
+		&:last-of-type {
+			margin-top: $base_size*2;
+		}
+	}
+
+	.post_comments h6 {
+		margin: 0;
+		font-size: $base_font_size;
+		text-transform: uppercase;
+	}
+
+	.comment_list {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+
+		li {
+			padding-top: $base_size;
+			padding-bottom: $base_size;
+			border-bottom: 1px solid darken($grey_light, 5%);
+		}
+	}
+
+	.comment_reply_title {
+		font-size: $base_font_size;
+		text-transform: uppercase;
+	}
+
+	.comment-notes,
+	.comment-notes span {
+		font-size: $base_font_size*0.8;
+	}
+
+	.form-submit {
+		margin-bottom: 2px;
+	}
+
+}

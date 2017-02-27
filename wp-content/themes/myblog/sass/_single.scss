@@ -24,6 +24,10 @@ body.single {
 			padding-left: $base_size;
 			padding-right: $base_size;
 		}
+
+		.entry-header {
+			border-bottom: 1px solid darken($grey_light, 5%);
+		}
 	
 		.post_date {
 			padding-top: $base_size*2;
@@ -58,7 +62,6 @@ body.single {
 		}
 
 		.container_post_meta {
-			border-bottom: 1px solid darken($grey_light, 5%);
 
 			@media (min-width: $medium) {
 				display: table-cell;

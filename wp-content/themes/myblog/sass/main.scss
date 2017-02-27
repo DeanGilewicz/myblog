@@ -1,9 +1,7 @@
 // External
 @import "normalize";
-// @import "genericons";
-@import "dg_grid";
-
 @import "../genericons/genericons";
+@import "dg_grid";
 
 // Global
 @import "fonts";
@@ -13,6 +11,7 @@
 // partials
 @import "header";
 @import "footer";
+@import "comments";
 
 // specific pages
 @import "index";
