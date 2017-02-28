@@ -67,34 +67,36 @@
 								// End the loop.
 								endwhile; ?>
 
+								<?php if( show_page_nav() ) : ?>
 									<nav class="container_page_nav">
 										<div class="pagination_loop">
 											<?php 
 												// Previous/next page navigation. 
 												the_posts_pagination( array(
-													'prev_text'          => __( 'Prev', 'myblog' ),
-													'next_text'          => __( 'Next', 'myblog' )
+													'prev_text' => __( 'Prev', 'myblog' ),
+													'next_text' => __( 'Next', 'myblog' )
 												) );
 											?>
 										</div>
 									</nav>
+								<?php endif; ?>
 
-									<div class="container_search">
+								<div class="container_search">
 
-										<form role="search" method="get" class="search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">
-											<!-- <label> -->
-												<!-- <span class="screen-reader-text"><?php echo _x( 'Search for:', 'label', 'myblog' ); ?></span> -->
-											<input type="search" class="search-field" placeholder="<?php echo esc_attr_x( 'Search &hellip;', 'placeholder', 'myblog' ); ?>" value="<?php echo get_search_query(); ?>" name="s" title="<?php echo esc_attr_x( 'Search for:', 'label', 'myblog' ); ?>" />
-											<!-- </label> -->
-											<button type="submit" class="search-submit button">
-												<!-- <span class="screen-reader-text"><?php echo _x( 'Search', 'submit button', 'myblog' ); ?></span> -->
-												s
-											</button>
-										</form>
+									<form role="search" method="get" class="search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+										<!-- <label> -->
+											<!-- <span class="screen-reader-text"><?php echo _x( 'Search for:', 'label', 'myblog' ); ?></span> -->
+										<input type="search" class="search-field" placeholder="<?php echo esc_attr_x( 'Search &hellip;', 'placeholder', 'myblog' ); ?>" value="<?php echo get_search_query(); ?>" name="s" title="<?php echo esc_attr_x( 'Search for:', 'label', 'myblog' ); ?>" />
+										<!-- </label> -->
+										<button type="submit" class="search-submit button">
+											<!-- <span class="screen-reader-text"><?php echo _x( 'Search', 'submit button', 'myblog' ); ?></span> -->
+											s
+										</button>
+									</form>
 
-									</div>
+								</div>
 
-								<?php
+							<?php
 
 							// If no content, include the "No posts found" template.
 							else :

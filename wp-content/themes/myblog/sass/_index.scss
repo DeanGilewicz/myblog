@@ -1,4 +1,5 @@
-body.home {
+body.home,
+body.search {
 
 	.container_hero {
 		height: 240px;
@@ -6,6 +7,12 @@ body.home {
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: center center;
+	}
+
+	.page-title.search_term {
+		font-size: $base_font_size;
+		font-weight: 700;
+		text-transform: uppercase;
 	}
 
 	.container_main_content {
@@ -19,7 +26,11 @@ body.home {
 
 		@media (min-width: $medium) {
 			display: table;
+			width: 100%;
+			margin-bottom: $base_size;
 			padding-top: 0;
+			padding-bottom: 0;
+    		border: 1px solid darken($grey_light, 5%);
 		}
 	}
 

@@ -1013,3 +1013,12 @@ function custom_breadcrumbs( array $options = array() ) {
 }
 // end custom_breadcrumb
 
+
+/**
+ * If more than one page exists, return TRUE.
+ */
+function show_page_nav() {
+    global $wp_query;
+    return ($wp_query->max_num_pages > 1);
+}
+
