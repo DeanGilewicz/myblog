@@ -69,17 +69,13 @@
 
 									<nav class="container_page_nav">
 										<div class="pagination_loop">
-											<?php // Previous/next page navigation. 
-												// the_posts_pagination( array(
-												// 	'prev_text'          => __( 'Previous page', 'myblog' ),
-												// 	'next_text'          => __( 'Next page', 'myblog' ),
-												// 	'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'myblog' ) . ' </span>',
-												// ) );
+											<?php 
+												// Previous/next page navigation. 
+												the_posts_pagination( array(
+													'prev_text'          => __( 'Prev', 'myblog' ),
+													'next_text'          => __( 'Next', 'myblog' )
+												) );
 											?>
-											<span class="page_number current">1</span>
-											<a class="page_number" href="">2</a>
-											<a class="page_number" href="">3</a>
-											<a class="page_number next" href="">Next</a>
 										</div>
 									</nav>
 

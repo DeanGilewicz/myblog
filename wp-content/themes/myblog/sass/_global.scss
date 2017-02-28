@@ -153,7 +153,11 @@ img {
 	border: 1px solid darken($grey_light, 5%);
 	background-color: $white;
 
-	.page_number {
+	.screen-reader-text {
+		display: none;
+	}
+
+	.page-numbers {
 		display: inline-block;
 		margin-right: $base_size*0.6;
 		padding: $base_size*0.6 $base_size*1.4;
@@ -169,5 +173,54 @@ img {
 		}
 
 	}
+}
+ 
+.post-navigation {
+	margin-top: $base_size*2;
+	padding: $base_size;
+	border: 1px solid darken($grey_light, 5%);
+	background-color: $white;
+
+	.screen-reader-text {
+		display: none;
+	}
+
+	.nav-links {
+		@extend .clearfix;
+		text-transform: uppercase;
+	}
+
+	.nav-previous,
+	.nav-next {
+		width: 50%;
+	}
+
+	.nav-previous {
+		float: left;
+	}
+
+	.nav-next {
+		float: right;
+		text-align: right;
+	}
+
+	.nav-previous a,
+	.nav-next a {
+		display: inline-block;
+		padding: $base_size*0.8 $base_size*1.4;
+		font-size: $base_font_size*0.9;
+		background-color: $grey_light;
+		transition:
+			background-color 0.4s ease,
+			color 0.4s ease;
+
+		&.current,
+		&:hover {
+			background-color: $orange;
+			color: $white;
+		}
+
+	}
+
 }
 

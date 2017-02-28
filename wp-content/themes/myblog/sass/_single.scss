@@ -26,6 +26,7 @@ body.single {
 		}
 
 		.entry-header {
+			margin-bottom: $base_size;
 			border-bottom: 1px solid darken($grey_light, 5%);
 		}
 	
@@ -67,7 +68,7 @@ body.single {
 				display: table-cell;
 				width: 68%;
 				width: calc(100% - 130px); // includes 40px padding
-				padding-top: $base_size;
+				padding: $base_size;
 				vertical-align: top;
 			}
 		}
@@ -110,6 +111,39 @@ body.single {
 
 		.entry-content {
 			border-bottom: 1px solid darken($grey_light, 5%);
+		}
+
+		.post_type .genericon-pinned {
+			font-size: $base_font_size*1.5;
+			padding: 4px;
+			border: 1px solid $orange;
+			border-radius: 50%;
+			color: $orange;
+		}
+
+		.post_cats,
+		.post_comments {
+			display: block;
+
+			a {
+				font-size: $base_font_size*0.9;
+			}
+		}
+
+		.table {
+			box-sizing: border-box;
+			display: table;
+			width: 100%;
+		}
+
+		.table_cell {
+			display: table-cell;
+			width: 50%;
+			vertical-align: middle;
+		}
+
+		.table .table_cell:last-child {
+			text-align: right;
 		}
 
 		.entry-footer {

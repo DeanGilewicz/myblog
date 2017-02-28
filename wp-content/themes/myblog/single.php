@@ -54,12 +54,12 @@
 
 							// Previous/next post navigation.
 							the_post_navigation( array(
-								'next_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Next', 'myblog' ) . '</span> ' .
-									'<span class="screen-reader-text">' . __( 'Next post:', 'myblog' ) . '</span> ' .
-									'<span class="post-title">%title</span>',
-								'prev_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Previous', 'myblog' ) . '</span> ' .
-									'<span class="screen-reader-text">' . __( 'Previous post:', 'myblog' ) . '</span> ' .
-									'<span class="post-title">%title</span>',
+								'prev_text'          => '&lt; Prev',
+								'next_text'          => 'Next &gt;',
+								'in_same_term'       => true,
+								'excluded_terms'     => '',
+								'taxonomy'           => 'category',
+								'screen_reader_text' => 'Post Navigation'
 							) );
 
 						// End the loop.

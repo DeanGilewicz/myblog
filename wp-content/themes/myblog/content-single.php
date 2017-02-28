@@ -41,30 +41,40 @@
 				</div>
 
 			</div>
-
-			<div class="post_type">
-				<i class="genericon genericon-pinned"></i>
-			</div>
-
-			<span class="post_cats">
-				<?php foreach ( get_the_category() as $cat ) : ?>
-					<?php 
-						$category_name  = $cat->cat_name;
-						$category_link  = get_category_link( $cat->cat_ID );
-					?>
-					<a href="<?php echo esc_url( $category_link ); ?>" title="<?php echo esc_attr( $category_name ); ?>"><?php echo esc_html( $category_name ); ?></a>
-				<?php endforeach; ?>
-			</span>
-
-			<span class="post_comments">
-				<a href="<?php echo get_comments_link( $post->ID ); ?>"><?php comments_number(); ?></a>
-			</span>
 			
 		</header><!-- .entry-header -->
 
-		
-
 		<div class="entry-content">
+
+			<div class="table">
+
+				<div class="post_type table_cell">
+					<i class="genericon genericon-pinned"></i>
+				</div>
+
+				<div class="container_cats_comments table_cell">
+
+					<span class="post_cats">
+						<?php foreach ( get_the_category() as $cat ) : ?>
+							<?php 
+								$category_name  = $cat->cat_name;
+								$category_link  = get_category_link( $cat->cat_ID );
+							?>
+							<div class="cat_link">
+								<i class="genericon genericon-category"></i>
+								<a href="<?php echo esc_url( $category_link ); ?>" title="<?php echo esc_attr( $category_name ); ?>"><?php echo esc_html( $category_name ); ?></a>
+							</div>
+						<?php endforeach; ?>
+					</span>
+
+					<span class="post_comments">
+						<i class="genericon genericon-comment"></i>
+						<a href="<?php echo get_comments_link( $post->ID ); ?>"><?php comments_number(); ?></a>
+					</span>
+
+				</div>
+
+			</div>
 
 			<?php
 				/* translators: %s: Name of current post */

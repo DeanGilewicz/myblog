@@ -70,25 +70,33 @@
 
 		</div><!-- .entry-content -->
 
-		<footer class="entry-footer">
+		<footer class="entry-footer table">
 
-			<div class="post_type">
+			<div class="post_type table_cell">
 				<i class="genericon genericon-pinned"></i>
 			</div>
 
-			<span class="post_cats">
-				<?php foreach ( get_the_category() as $cat ) : ?>
-					<?php 
-						$category_name  = $cat->cat_name;
-						$category_link  = get_category_link( $cat->cat_ID );
-					?>
-					<a href="<?php echo esc_url( $category_link ); ?>" title="<?php echo esc_attr( $category_name ); ?>"><?php echo esc_html( $category_name ); ?></a>
-				<?php endforeach; ?>
-			</span>
+			<div class="container_cats_comments table_cell">
+				
+				<span class="post_cats">
+					<?php foreach ( get_the_category() as $cat ) : ?>
+						<?php 
+							$category_name  = $cat->cat_name;
+							$category_link  = get_category_link( $cat->cat_ID );
+						?>
+						<div class="cat_link">
+							<i class="genericon genericon-category"></i>
+							<a href="<?php echo esc_url( $category_link ); ?>" title="<?php echo esc_attr( $category_name ); ?>"><?php echo esc_html( $category_name ); ?></a>
+						</div>
+					<?php endforeach; ?>
+				</span>
 
-			<span class="post_comments">
-				<a href="<?php echo get_comments_link( $post->ID ); ?>"><?php comments_number(); ?></a>
-			</span>
+				<span class="post_comments">
+					<i class="genericon genericon-comment"></i>
+					<a href="<?php echo get_comments_link( $post->ID ); ?>"><?php comments_number(); ?></a>
+				</span>
+
+			</div>
 
 			<!-- <?php edit_post_link( __( 'Edit', 'myblog' ), '<span class="edit-link">', '</span>' ); ?> -->
 		
