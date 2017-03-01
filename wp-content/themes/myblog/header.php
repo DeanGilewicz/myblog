@@ -39,33 +39,23 @@
 				<!-- </label> -->
 				<button type="submit" class="search-submit button">
 					<!-- <span class="screen-reader-text"><?php echo _x( 'Search', 'submit button', 'myblog' ); ?></span> -->
-					s
+					<i class="genericon genericon-search"></i>
 				</button>
 			</form>
 
-	        <ul>
-	            <li>
-	                <a href="">root</a>
+			<ul>
+				<li>
+	                <a href="/">root</a>
 	            </li>
-	            <li>
-	                <a href="">html</a>
-	            </li>
-	            <li>
-	                <a href="">css</a>
-	            </li>
-	            <li>
-	                <a href="">js</a>
-	            </li>
-	            <li>
-	                <a href="">php</a>
-	            </li>
-	            <li>
-	                <a href="">assets</a>
-	            </li>
-	            <li>
-	                <a href="">dist</a>
-	            </li>
-	        </ul>
+			<?php 
+				wp_list_categories( array(
+					'orderby' => 'name',
+					'title_li' => '',
+					'current_category' => 1,
+					'hide_title_if_empty' => true
+				) );
+			?>
+			</ul>
 	    </nav>
 
 		<div id="sidebar" class="sidebar">
