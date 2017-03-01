@@ -20,6 +20,13 @@ body.search {
 		padding-bottom: $base_size*2;
 	}
 
+	.container_not_found_content {
+		margin-bottom: $base_size*2;
+		padding: $base_size;
+		border: 1px solid darken($grey_light, 5%);
+		background-color: $white;
+	}
+
 	.entry-header {
 		padding-top: $base_size;
 		padding-bottom: $base_size;

@@ -1,0 +1,39 @@
+body.error404 {
+
+	.container_main_content {
+		padding-top: $base_size*2;
+		padding-bottom: $base_size*2;
+	}
+
+	.page-title {
+		font-size: $base_font_size;
+		font-weight: 700;
+		text-transform: uppercase;
+	}
+
+	.container_not_found_content {
+		margin-bottom: $base_size*2;
+		padding: $base_size;
+		border: 1px solid darken($grey_light, 5%);
+		background-color: $white;
+	}
+
+	.container_search {
+		margin-top: $base_size*4;
+		margin-bottom: $base_size*2;
+		border: 1px solid darken($grey_light, 5%);
+		background-color: $white;
+
+		.search-form {
+			padding: $base_size*1.2 $base_size;
+		
+			input {
+				border: none;
+				background-color: $grey_light;
+			}
+
+		}
+
+	} 
+
+}
