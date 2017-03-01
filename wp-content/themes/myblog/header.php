@@ -105,12 +105,9 @@
 
 				<div class="dg_grid_row">
 
-					<div class="dg_grid_col col_2">
-						<div class="js-trigger-menu"></div>
-					</div>
-
-					<div class="dg_grid_col col_10">
-						<div class="logo_site">blog.deangilewicz.com</div>
+					<div class="dg_grid_col col_12 container_js_trigger_menu">
+						<i class="genericon genericon-menu js-trigger-menu"></i>
+						<a href="/" class="logo_site">blog.deangilewicz.com</a>
 					</div>
 
 				</div>

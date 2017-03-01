@@ -22,42 +22,82 @@
 	<section id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-		<?php if ( have_posts() ) : ?>
+			<div class="container_main_content">
 
-			<header class="page-header">
-				<?php
-					the_archive_title( '<h1 class="page-title">', '</h1>' );
-					the_archive_description( '<div class="taxonomy-description">', '</div>' );
-				?>
-			</header><!-- .page-header -->
+				<div class="dg_grid_container">
 
-			<?php
-			// Start the Loop.
-			while ( have_posts() ) : the_post();
+					<div class="dg_grid_row">
 
-				/*
-				 * Include the Post-Format-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-				 */
-				get_template_part( 'content', get_post_format() );
+						<div class="dg_grid_col col_12">
 
-			// End the loop.
-			endwhile;
+							<?php if ( have_posts() ) : ?>
 
-			// Previous/next page navigation.
-			the_posts_pagination( array(
-				'prev_text'          => __( 'Previous page', 'myblog' ),
-				'next_text'          => __( 'Next page', 'myblog' ),
-				'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'myblog' ) . ' </span>',
-			) );
+								<header class="page-header">
+									<?php
+										the_archive_title( '<h1 class="page-title">', '</h1>' );
+										the_archive_description( '<div class="taxonomy-description">', '</div>' );
+									?>
+								</header><!-- .page-header -->
 
-		// If no content, include the "No posts found" template.
-		else :
-			get_template_part( 'content', 'none' );
+								<?php
+								// Start the Loop.
+								while ( have_posts() ) : the_post();
 
-		endif;
-		?>
+									/*
+									 * Include the Post-Format-specific template for the content.
+									 * If you want to override this in a child theme, then include a file
+									 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
+									 */
+									get_template_part( 'content', get_post_format() );
+
+								// End the loop.
+								endwhile; ?>
+
+								<?php if( show_page_nav() ) : ?>
+									<nav class="container_page_nav">
+										<div class="pagination_loop">
+											<?php 
+												// Previous/next page navigation. 
+												the_posts_pagination( array(
+													'prev_text' => __( 'Prev', 'myblog' ),
+													'next_text' => __( 'Next', 'myblog' )
+												) );
+											?>
+										</div>
+									</nav>
+								<?php endif; ?>
+
+								<div class="container_search">
+
+									<form role="search" method="get" class="search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+										<!-- <label> -->
+											<!-- <span class="screen-reader-text"><?php echo _x( 'Search for:', 'label', 'myblog' ); ?></span> -->
+										<input type="search" class="search-field" placeholder="<?php echo esc_attr_x( 'Search &hellip;', 'placeholder', 'myblog' ); ?>" value="<?php echo get_search_query(); ?>" name="s" title="<?php echo esc_attr_x( 'Search for:', 'label', 'myblog' ); ?>" />
+										<!-- </label> -->
+										<button type="submit" class="search-submit button">
+											<!-- <span class="screen-reader-text"><?php echo _x( 'Search', 'submit button', 'myblog' ); ?></span> -->
+											s
+										</button>
+									</form>
+
+								</div>
+
+							<?php
+
+							// If no content, include the "No posts found" template.
+							else :
+								get_template_part( 'content', 'none' );
+
+							endif;
+							?>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
 
 		</main><!-- .site-main -->
 	</section><!-- .content-area -->

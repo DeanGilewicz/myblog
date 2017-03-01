@@ -58,22 +58,43 @@
 }
 
 .container_main_header {
+	padding-top: $base_size*2.5;
+	padding-bottom: $base_size*2.5;
 	background-color: $grey_dark;
 	color: $white;
 }
 
+.container_js_trigger_menu {
+	position: relative;
+	padding-top: $base_size;
+	padding-bottom: $base_size;
+}
+
 .js-trigger-menu {
-	width: 30px;
-	height: 30px;
-	// vertical-align: middle;
-	background: red;
+	display: inline-block;
+	position: absolute;
+	top: 50%;
+	left: 12px;
+	transform: translate(0,-50%);
+	font-size: 28px;
+	cursor: pointer;
 
 	@media (min-width: $medium) {
 		display: none;
 	}
+
 }
 
 .logo_site {
 	display: block;
+	font-size: $base_font_size*1.2;
+	text-transform: uppercase;
 	text-align: center;
+	color: $white;
+
+	&:hover,
+	&:focus {
+		color: $white;
+	}
+
 }

@@ -13,81 +13,97 @@
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-			<?php
-				// Start the loop.
-				while ( have_posts() ) : the_post();
-			?>
+			<div class="container_main_content">
 
-				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+				<div class="dg_grid_container">
 
-					<nav id="image-navigation" class="navigation image-navigation">
-						<div class="nav-links">
-							<div class="nav-previous"><?php previous_image_link( false, __( 'Previous Image', 'myblog' ) ); ?></div><div class="nav-next"><?php next_image_link( false, __( 'Next Image', 'myblog' ) ); ?></div>
-						</div><!-- .nav-links -->
-					</nav><!-- .image-navigation -->
+					<div class="dg_grid_row">
 
-					<header class="entry-header">
-						<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-					</header><!-- .entry-header -->
+						<div class="dg_grid_col col_12">
 
-					<div class="entry-content">
-
-						<div class="entry-attachment">
 							<?php
-								/**
-								 * Filter the default myblog image attachment size.
-								 *
-								 * @since Twenty Fifteen 1.0
-								 *
-								 * @param string $image_size Image size. Default 'large'.
-								 */
-								$image_size = apply_filters( 'myblog_attachment_size', 'large' );
-
-								echo wp_get_attachment_image( get_the_ID(), $image_size );
+								// Start the loop.
+								while ( have_posts() ) : the_post();
 							?>
 
-							<?php if ( has_excerpt() ) : ?>
-								<div class="entry-caption">
-									<?php the_excerpt(); ?>
-								</div><!-- .entry-caption -->
-							<?php endif; ?>
+								<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-						</div><!-- .entry-attachment -->
+									<nav id="image-navigation" class="navigation image-navigation">
+										<div class="nav-links">
+											<div class="nav-previous"><?php previous_image_link( false, __( 'Previous Image', 'myblog' ) ); ?></div><div class="nav-next"><?php next_image_link( false, __( 'Next Image', 'myblog' ) ); ?></div>
+										</div><!-- .nav-links -->
+									</nav><!-- .image-navigation -->
 
-						<?php
-							the_content();
-							wp_link_pages( array(
-								'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'myblog' ) . '</span>',
-								'after'       => '</div>',
-								'link_before' => '<span>',
-								'link_after'  => '</span>',
-								'pagelink'    => '<span class="screen-reader-text">' . __( 'Page', 'myblog' ) . ' </span>%',
-								'separator'   => '<span class="screen-reader-text">, </span>',
-							) );
-						?>
-					</div><!-- .entry-content -->
+									<header class="entry-header">
+										<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+									</header><!-- .entry-header -->
 
-					<footer class="entry-footer">
-						<?php myblog_entry_meta(); ?>
-						<?php edit_post_link( __( 'Edit', 'myblog' ), '<span class="edit-link">', '</span>' ); ?>
-					</footer><!-- .entry-footer -->
+									<div class="entry-content">
 
-				</article><!-- #post-## -->
+										<div class="entry-attachment">
+											<?php
+												/**
+												 * Filter the default myblog image attachment size.
+												 *
+												 * @since myblog 1.0
+												 *
+												 * @param string $image_size Image size. Default 'large'.
+												 */
+												$image_size = apply_filters( 'myblog_attachment_size', 'large' );
 
-				<?php
-					// If comments are open or we have at least one comment, load up the comment template
-					if ( comments_open() || get_comments_number() ) :
-						comments_template();
-					endif;
+												echo wp_get_attachment_image( get_the_ID(), $image_size );
+											?>
 
-					// Previous/next post navigation.
-					the_post_navigation( array(
-						'prev_text' => _x( '<span class="meta-nav">Published in</span><span class="post-title">%title</span>', 'Parent post link', 'myblog' ),
-					) );
+											<?php if ( has_excerpt() ) : ?>
+												<div class="entry-caption">
+													<?php the_excerpt(); ?>
+												</div><!-- .entry-caption -->
+											<?php endif; ?>
 
-				// End the loop.
-				endwhile;
-			?>
+										</div><!-- .entry-attachment -->
+
+										<?php
+											the_content();
+											wp_link_pages( array(
+												'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'myblog' ) . '</span>',
+												'after'       => '</div>',
+												'link_before' => '<span>',
+												'link_after'  => '</span>',
+												'pagelink'    => '<span class="screen-reader-text">' . __( 'Page', 'myblog' ) . ' </span>%',
+												'separator'   => '<span class="screen-reader-text">, </span>',
+											) );
+										?>
+									</div><!-- .entry-content -->
+
+									<footer class="entry-footer">
+										<?php // myblog_entry_meta(); ?>
+										<!--- <?php edit_post_link( __( 'Edit', 'myblog' ), '<span class="edit-link">', '</span>' ); ?> -->
+									</footer><!-- .entry-footer -->
+
+								</article><!-- #post-## -->
+
+								<?php
+									// If comments are open or we have at least one comment, load up the comment template
+									if ( comments_open() || get_comments_number() ) :
+										comments_template();
+									endif;
+
+									// Previous/next post navigation.
+									the_post_navigation( array(
+										'prev_text' => _x( '<span class="meta-nav">Published in</span> <span class="post-title">%title</span>', 'Parent post link', 'myblog' ),
+									) );
+
+								// End the loop.
+								endwhile;
+							?>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
 
 		</main><!-- .site-main -->
 	</div><!-- .content-area -->

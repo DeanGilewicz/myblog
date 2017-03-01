@@ -1,0 +1,18 @@
+body.attachment {
+
+	.container_main_content {
+		padding-top: $base_size*2;
+		padding-bottom: $base_size*2;
+	}
+
+	.entry-title {
+		font-size: $base_font_size;
+		font-weight: 700;
+		text-transform: uppercase;
+	}
+
+	.entry-attachment img {
+		max-width: 100%;
+	}
+
+}
