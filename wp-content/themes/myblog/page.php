@@ -17,21 +17,38 @@
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-		<?php
-		// Start the loop.
-		while ( have_posts() ) : the_post();
+			<div class="container_main_content">
+			
+				<div class="dg_grid_container">
 
-			// Include the page content template.
-			get_template_part( 'content', 'page' );
+					<div class="dg_grid_row">
 
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
+						<div class="dg_grid_col col_12">
+							
+							<?php
+							// Start the loop.
+							while ( have_posts() ) : the_post();
 
-		// End the loop.
-		endwhile;
-		?>
+								// Include the page content template.
+								get_template_part( 'content', 'page' );
+
+								// If comments are open or we have at least one comment, load up the comment template.
+								if ( comments_open() || get_comments_number() ) :
+									comments_template();
+								endif;
+
+							// End the loop.
+							endwhile;
+							?>
+
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
 
 		</main><!-- .site-main -->
 	</div><!-- .content-area -->

@@ -45,13 +45,15 @@
 
 			<ul>
 				<li>
-	                <a href="/">root</a>
+	                <a href="/" class="">home</a>
+	            </li>
+				<li>
+	                <a href="/about-me" class="">about me</a>
 	            </li>
 			<?php 
 				wp_list_categories( array(
 					'orderby' => 'name',
 					'title_li' => '',
-					'current_category' => 1,
 					'hide_title_if_empty' => true
 				) );
 			?>

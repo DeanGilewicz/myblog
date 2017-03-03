@@ -15,6 +15,7 @@
 	position: fixed;
 	top: 0;
 	left: 0;
+	z-index: 5;
 	width: 15.625rem;
 	height: 100%;
 	padding-top: $base_size*2;
@@ -24,7 +25,6 @@
 	transition: transform 200ms ease-in;
 
 	@media (min-width: $medium) {
-		padding-top: $base_size*5;
 		transform: translate3d(0, 0, 0);
 	}
 
@@ -40,6 +40,10 @@
 
 	li {
 	    margin: 0;
+
+	    &.current-cat a {
+	    	color: $orange;
+	    }
 	}
 
 	a {

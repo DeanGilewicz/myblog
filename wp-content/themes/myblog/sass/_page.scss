@@ -1,0 +1,20 @@
+body.page {
+
+	.container_main_content {
+		padding-top: $base_size*2;
+		padding-bottom: $base_size*2;
+	}
+
+	.entry-title {
+		font-size: $base_font_size;
+		font-weight: 700;
+		text-transform: uppercase;
+	}
+
+	.entry-content {
+		padding: $base_size;
+		border: 1px solid darken($grey_light, 5%);
+		background-color: $white;
+	}
+
+}

@@ -90,7 +90,7 @@
 										<!-- </label> -->
 										<button type="submit" class="search-submit button">
 											<!-- <span class="screen-reader-text"><?php echo _x( 'Search', 'submit button', 'myblog' ); ?></span> -->
-											s
+											<i class="genericon genericon-search"></i>
 										</button>
 									</form>
 
