@@ -22,13 +22,17 @@
 
 			<div class="container_hero">
 
-				<div class="dg_grid_container">
+				<div class="overlay">
 
-					<div class="dg_grid_row">
+					<div class="dg_grid_container hero_content">
 
-						<div class="dg_grid_col col_12">
-							<h1><?php echo get_bloginfo('name'); ?></h1>
-							<p><?php echo get_bloginfo('description'); ?></p>
+						<div class="dg_grid_row">
+
+							<div class="dg_grid_col col_12">
+								<h1><?php echo get_bloginfo('name'); ?></h1>
+								<p><?php echo get_bloginfo('description'); ?></p>
+							</div>
+
 						</div>
 
 					</div>
