@@ -22,6 +22,9 @@
 				<span><?php the_time('j'); ?></span>
 				<span><?php the_time('F'); ?></span>
 				<span><?php the_time('Y'); ?></span>
+				<?php if( get_post_meta($post->ID, 'Read Time', true) ) : ?>
+					<p><?php echo '<i class="genericon genericon-time"></i>' . get_post_meta($post->ID, 'Read Time', true); ?></p>
+				<?php endif; ?>
 			</div>
 
 			<div class="container_post_meta">

@@ -60,6 +60,16 @@ body.single {
 				}
 			}
 
+			p {
+				margin: $base_size*0.6 0 0;
+				font-size: $base_font_size*0.8;
+
+				i {
+					font-size: $base_font_size*1.1;
+				    vertical-align: middle;
+				}
+			}
+
 		}
 
 		.container_post_meta {
