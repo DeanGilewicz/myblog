@@ -44,10 +44,10 @@
 			</form>
 
 			<ul>
-				<li>
-	                <a href="/" class="">home</a>
+				<li class="<?php if( is_home() ) { echo 'current-cat'; } ?>">
+	                <a href="/">home</a>
 	            </li>
-				<li>
+				<li class="<?php if( is_page('about-me') ) { echo 'current-cat'; } ?>">
 	                <a href="/about-me" class="">about me</a>
 	            </li>
 			<?php 
