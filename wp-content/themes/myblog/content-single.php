@@ -100,8 +100,30 @@
 		</div><!-- .entry-content -->
 
 		<footer class="entry-footer">
-
-			share on
+			<?php 
+				
+				// Get current page URL 
+				$myblogURL = urlencode( get_permalink() );
+		 
+				// Get current page title
+				$myblogTitle = str_replace( ' ', '%20', get_the_title() );
+						 
+				// Construct sharing URL without using any script
+				$twitterURL  = 'https://twitter.com/intent/tweet?text='.$myblogTitle.'&amp;url='.$myblogURL.'&amp;via=myblog';
+				$facebookURL = 'https://www.facebook.com/sharer/sharer.php?u='.$myblogURL;
+				$linkedInURL = 'https://www.linkedin.com/shareArticle?mini=true&url='.$myblogURL.'&amp;title='.$myblogTitle;
+		 		 
+				// Create sharing buttons
+				$socialLinks  = '';
+				$socialLinks .= '<div class="container_myblog_social">';
+				$socialLinks .= '<h4>share on</h4> <a class="myblog_link myblog_twitter" href="'. $twitterURL .'" target="_blank">Twitter</a>';
+				$socialLinks .= '<a class="myblog_link myblog_facebook" href="'.$facebookURL.'" target="_blank">Facebook</a>';
+				$socialLinks .= '<a class="myblog_link myblog_linkedin" href="'.$linkedInURL.'" target="_blank">LinkedIn</a>';
+				$socialLinks .= '</div>';
+				
+				// Display in template
+				echo $socialLinks; 
+			?>
 
 			<!-- <?php edit_post_link( __( 'Edit', 'myblog' ), '<span class="edit-link">', '</span>' ); ?> -->
 		

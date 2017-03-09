@@ -1123,3 +1123,57 @@ function myblog_entry_taxonomies() {
 }
 endif;
 
+
+
+/* Social Share
+if ( ! function_exists( 'myblog_social_sharing_buttons' ) ) :
+
+function myblog_social_sharing_buttons($content) {
+	
+	global $post;
+
+	// if single post
+	if( is_singular() ) {
+	
+		// Get current page URL 
+		$myblogURL = urlencode( get_permalink() );
+ 
+		// Get current page title
+		$myblogTitle = str_replace( ' ', '%20', get_the_title() );
+		
+		// Get Post Thumbnail for pinterest
+		// $myblogThumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' );
+ 
+		// Construct sharing URL without using any script
+		$twitterURL = 'https://twitter.com/intent/tweet?text='.$myblogTitle.'&amp;url='.$myblogURL.'&amp;via=myblog';
+		$facebookURL = 'https://www.facebook.com/sharer/sharer.php?u='.$myblogURL;
+		// $googleURL = 'https://plus.google.com/share?url='.$myblogURL;
+		// $bufferURL = 'https://bufferapp.com/add?url='.$myblogURL.'&amp;text='.$myblogTitle;
+		// $whatsappURL = 'whatsapp://send?text='.$myblogTitle . ' ' . $myblogURL;
+		$linkedInURL = 'https://www.linkedin.com/shareArticle?mini=true&url='.$myblogURL.'&amp;title='.$myblogTitle;
+ 
+		// Based on popular demand added Pinterest too
+		// $pinterestURL = 'https://pinterest.com/pin/create/button/?url='.$myblogURL.'&amp;media='.$myblogThumbnail[0].'&amp;description='.$myblogTitle;
+ 
+		// Add sharing button at the end of page/page content
+		$content .= '<div class="myblog-social">';
+		$content .= '<h5>SHARE ON</h5> <a class="myblog-link myblog-twitter" href="'. $twitterURL .'" target="_blank">Twitter</a>';
+		$content .= '<a class="myblog-link myblog-facebook" href="'.$facebookURL.'" target="_blank">Facebook</a>';
+		// $content .= '<a class="myblog-link myblog-whatsapp" href="'.$whatsappURL.'" target="_blank">WhatsApp</a>';
+		// $content .= '<a class="myblog-link myblog-googleplus" href="'.$googleURL.'" target="_blank">Google+</a>';
+		// $content .= '<a class="myblog-link myblog-buffer" href="'.$bufferURL.'" target="_blank">Buffer</a>';
+		$content .= '<a class="myblog-link myblog-linkedin" href="'.$linkedInURL.'" target="_blank">LinkedIn</a>';
+		// $content .= '<a class="myblog-link myblog-pinterest" href="'.$pinterestURL.'" data-pin-custom="true" target="_blank">Pin It</a>';
+		$content .= '</div>';
+		
+		return $content;
+	
+	} else {
+
+		// if not a post/page then don't include sharing button
+		return $content;
+	}
+};
+add_filter( 'the_content', 'myblog_social_sharing_buttons');
+endif;
+*/
