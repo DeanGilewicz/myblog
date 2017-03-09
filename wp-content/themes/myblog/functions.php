@@ -1124,6 +1124,9 @@ function myblog_entry_taxonomies() {
 endif;
 
 
+/* remove <p> tags around WYSIWYG content */
+remove_filter( 'the_content', 'wpautop' );
+
 
 /* Social Share
 if ( ! function_exists( 'myblog_social_sharing_buttons' ) ) :

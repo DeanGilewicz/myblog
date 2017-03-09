@@ -25,8 +25,6 @@
 				<?php endif; ?>
 			</div>
 
-
-
 			<div class="container_post_meta">
 				
 				<div class="post_title">
@@ -48,7 +46,15 @@
 		</header><!-- .entry-header -->
 
 		<div class="post_feature_img">
-			<?php the_post_thumbnail(); ?>
+			<?php // the_post_thumbnail(); ?>
+			<?php $src_small  = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'medium' );?>
+			<?php $src_medium_up = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'medium_large' );?>
+			<div class="container_bg_img small">
+				<div class="bg_img" style="background-image: url('<? echo $src_small[0]; ?>')"></div>
+			</div>
+			<div class="container_bg_img medium_up">
+				<div class="bg_img" style="background-image: url('<? echo $src_medium_up[0]; ?>')"></div>
+			</div>
 		</div>
 
 		<div class="entry-content">

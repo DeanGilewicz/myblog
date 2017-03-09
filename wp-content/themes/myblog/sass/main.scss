@@ -8,16 +8,19 @@
 @import "variables";
 @import "global";
 
-// partials
+// Partials
 @import "header";
 @import "footer";
 @import "comments";
 @import "social-share";
 
-// specific pages
+// Pages
 @import "index";
 @import "404";
 @import "single";
 @import "archive";
 @import "attachment";
 @import "page";
+
+// Post Types
+@import "post-code";
