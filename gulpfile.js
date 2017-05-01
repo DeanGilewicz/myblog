@@ -18,14 +18,14 @@ var gulp = require('gulp'),
 
 // catch mistakes in custom js file
 gulp.task('jshint', function() {
-	return gulp.src('wp-content/themes/myblog/js/main.js')
+	return gulp.src('wp-content/themes/thecodelog/js/main.js')
 		.pipe(jshint())
 		.pipe(jshint.reporter('jshint-stylish'));
 });
 
 // minify custom js script and place in dist folder
 gulp.task('scripts', function() {
-	return gulp.src('wp-content/themes/myblog/js/main.js')
+	return gulp.src('wp-content/themes/thecodelog/js/main.js')
 		.pipe(sourcemaps.init())
 		.pipe(babel({
 			presets: ['es2015']
@@ -39,7 +39,7 @@ gulp.task('scripts', function() {
 		}))
 		.pipe(rename('main.min.js'))
 		.pipe(sourcemaps.write('./'))
-		.pipe(gulp.dest('wp-content/themes/myblog/dist/js/'));
+		.pipe(gulp.dest('wp-content/themes/thecodelog/dist/js/'));
 });
 
 
@@ -51,7 +51,7 @@ gulp.task('styles', function() {
 		autoprefixer({browsers: ['last 3 versions']}),
 		cssnano
 	];
-	return gulp.src('wp-content/themes/myblog/sass/main.scss')
+	return gulp.src('wp-content/themes/thecodelog/sass/main.scss')
 		.pipe(sass({ outputStyle: 'expanded' })
 			.on('error', sass.logError)
 		)
@@ -59,7 +59,7 @@ gulp.task('styles', function() {
 		.pipe(postcss(processors))
 		.pipe(rename('main.min.css'))
 		.pipe(sourcemaps.write('./'))
-		.pipe(gulp.dest('wp-content/themes/myblog/dist/css'));
+		.pipe(gulp.dest('wp-content/themes/thecodelog/dist/css'));
 });
 
 
@@ -67,8 +67,8 @@ gulp.task('styles', function() {
 
 // currently each task is independent so each type of file will need to be saved once to perform actions
 gulp.task('watch', function() {
-	gulp.watch('wp-content/themes/myblog/sass/**', ['styles']);
-	gulp.watch('wp-content/themes/myblog/js/main.js', ['jshint', 'scripts']);
+	gulp.watch('wp-content/themes/thecodelog/sass/**', ['styles']);
+	gulp.watch('wp-content/themes/thecodelog/js/main.js', ['jshint', 'scripts']);
 });
 
 // register default tasks

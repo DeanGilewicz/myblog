@@ -1,5 +1,3 @@
-# Welcome to myblog
+# Welcome to thecodelog
 
-## This is a collection of code snippets and notes to reinforce understanding of web development concepts.
-
-### An attempt will be made to provide simplified breakdowns of code concepts in an effort to help increase ease of learning.
+## This is my personal blog to gather my thoughts in one centralized place to help solidify important web development concepts.

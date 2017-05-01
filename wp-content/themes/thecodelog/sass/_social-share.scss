@@ -1,0 +1,77 @@
+.container_thecodelog_social {
+
+    h4 {
+        margin: 0 0 $base_size*0.6;
+        font-size: $base_font_size*0.9;
+        text-transform: uppercase;
+    }
+
+    .thecodelog_link {
+        text-decoration: none;
+        display: inline-block;
+        margin-right: $base_size*0.6;
+        padding: $base_size*0.6 $base_size*0.8;
+        border-radius: $base_size*0.4;
+        font-size: $base_font_size*0.8;
+        text-transform: uppercase;
+        cursor: pointer;
+        color: $white;
+
+        &:hover,
+        &:active {
+            color: $white;
+        }
+
+    }
+
+    .thecodelog_twitter {
+        background: #00aced;
+
+        &:hover,
+        &:active {
+            background: #0084b4;
+        }
+
+    }
+
+    .thecodelog_facebook {
+        background: #3B5997;
+
+        &:hover,
+        &:active {
+            background: #2d4372;
+        }
+
+    }
+
+    .thecodelog_linkedin {
+        background: #0074A1;
+
+        &:hover,
+        &:active {
+            background: #006288;
+        }
+
+    }
+
+    .thecodelog_googleplus {
+        background: #D64937;
+
+        &:hover,
+        &:active {
+            background: #b53525;
+        }
+
+    }
+
+    .thecodelog_pinterest {
+        background: #bd081c;
+
+        &:hover,
+        &:active {
+            background: #bd081c;
+        }
+
+    }
+
+}
