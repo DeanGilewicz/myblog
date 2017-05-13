@@ -100,7 +100,9 @@
 
 					<div class="dg_grid_col col_12 container_js_trigger_menu">
 						<i class="genericon genericon-menu js-trigger-menu"></i>
-						<a href="/" class="logo_site">thecodelog.com</a>
+						<a href="/" title="the code log" class="logo_site">
+							<img src="/wp-content/themes/thecodelog/dist/images/logo-tcl-flat@2x.png" alt="the code log logo"/>
+						</a>
 					</div>
 
 				</div>

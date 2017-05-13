@@ -69,10 +69,16 @@
 }
 
 .container_main_header {
-	padding-top: $base_size*2.5;
-	padding-bottom: $base_size*2.5;
-	background-color: $grey_dark;
+	padding-top: $base_size*7.5;
+	padding-bottom: $base_size*3.5;
+	background-color: $grey_brand;
 	color: $white;
+
+	@media (min-width: $medium) {
+		padding-top: $base_size*2.5;
+		padding-bottom: $base_size*2.5;
+	}
+
 }
 
 .container_js_trigger_menu {
@@ -84,9 +90,8 @@
 .js-trigger-menu {
 	display: inline-block;
 	position: absolute;
-	top: 48%;
+	top: -42px;
 	left: 12px;
-	transform: translate(0,-52%);
 	font-size: 28px;
 	cursor: pointer;
 
@@ -100,12 +105,16 @@
 	display: block;
 	font-size: $base_font_size*1.2;
 	text-transform: uppercase;
-	text-align: right;
 	color: $white;
 
 	&:hover,
 	&:focus {
 		color: $white;
+	}
+
+	img {
+		width: 100%;
+		max-width: 540px;
 	}
 	
 	@media (min-width: 400px) {
