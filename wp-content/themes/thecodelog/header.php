@@ -101,7 +101,8 @@
 					<div class="dg_grid_col col_12 container_js_trigger_menu">
 						<i class="genericon genericon-menu js-trigger-menu"></i>
 						<a href="/" title="the code log" class="logo_site">
-							<img src="/wp-content/themes/thecodelog/dist/images/logo-tcl-flat@2x.png" alt="the code log logo"/>
+							<img src="/wp-content/themes/thecodelog/dist/images/logo-tcl-stacked@2x.png" alt="the code log logo" class="small"/>
+							<img src="/wp-content/themes/thecodelog/dist/images/logo-tcl-flat@2x.png" alt="the code log logo" class="medium" />
 						</a>
 					</div>
 

@@ -70,7 +70,7 @@
 
 .container_main_header {
 	padding-top: $base_size*7.5;
-	padding-bottom: $base_size*3.5;
+	padding-bottom: $base_size*2.5;
 	background-color: $grey_brand;
 	color: $white;
 
@@ -103,9 +103,11 @@
 
 .logo_site {
 	display: block;
+	margin: 0 auto;
 	font-size: $base_font_size*1.2;
 	text-transform: uppercase;
 	color: $white;
+	text-align: center;
 
 	&:hover,
 	&:focus {
@@ -114,11 +116,25 @@
 
 	img {
 		width: 100%;
+	}
+	max-width: 540px;
+
+	.small {
+		max-width: 320px;
+
+		@media (min-width: 480px) {
+			display: none;
+		}
+	}
+
+	.medium {
+		display: none;
 		max-width: 540px;
+		
+		@media (min-width: 480px) {
+			display: block;
+		}
 	}
 	
-	@media (min-width: 400px) {
-		text-align: center;
-	}
 
 }
