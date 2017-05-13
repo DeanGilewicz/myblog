@@ -61,6 +61,11 @@
 	    background: darken($grey_dark, 10%);
 	}
 
+	.search-field ,
+	.search-submit {
+		border: 1px solid $orange;
+	}
+
 }
 
 .container_main_header {
