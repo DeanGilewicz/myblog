@@ -14,8 +14,8 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Hind|Open+Sans" />
-	<link rel="stylesheet" type='text/css' href="<?= get_stylesheet_directory_uri(); ?>/dist/css/main.min.css" />
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto+Mono|Rubik:900" />
+	<link rel="stylesheet" type="text/css" href="<?= get_stylesheet_directory_uri(); ?>/dist/css/main.min.css" />
 	<!-- <link rel="profile" href="http://gmpg.org/xfn/11"> -->
 	<!-- <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>"> -->
 	<!--[if lt IE 9]>
@@ -101,8 +101,8 @@
 					<div class="dg_grid_col col_12 container_js_trigger_menu">
 						<i class="genericon genericon-menu js-trigger-menu"></i>
 						<a href="/" title="the code log" class="logo_site">
-							<img src="/wp-content/themes/thecodelog/dist/images/logo-tcl-stacked@2x.png" alt="the code log logo" class="small"/>
-							<img src="/wp-content/themes/thecodelog/dist/images/logo-tcl-flat@2x.png" alt="the code log logo" class="medium" />
+							<img src="<?= get_stylesheet_directory_uri(); ?>/dist/images/logo-tcl-stacked@2x.png" alt="the code log logo" class="small"/>
+							<img src="<?= get_stylesheet_directory_uri(); ?>/dist/images/logo-tcl-flat@2x.png" alt="the code log logo" class="medium" />
 						</a>
 					</div>
 

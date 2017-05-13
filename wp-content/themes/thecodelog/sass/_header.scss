@@ -20,7 +20,7 @@
 	height: 100%;
 	padding-top: $base_size*2;
 	padding-bottom: $base_size*2;
-	background-color: $grey_dark;
+	background-color: $black;
     transform: translate3d(-100%, 0, 0);
 	transition: transform 200ms ease-in;
 
@@ -50,7 +50,7 @@
 		text-decoration: none;
 		display: block;
 		padding: $base_size*1.2 $base_size*1.5;
-		border-bottom: 1px solid $grey;
+		border-bottom: 1px solid lighten($black, 30%);
 		// letter-spacing: 2px;
 		// font-weight: 300;
 		font-size: $base_font_size;
@@ -58,7 +58,7 @@
 	}
 
 	a:hover {
-	    background: darken($grey_dark, 10%);
+	    background-color: lighten($black, 10%);
 	}
 
 	.search-field ,

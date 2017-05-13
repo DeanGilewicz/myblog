@@ -92,13 +92,13 @@ if ( post_password_required() ) {
 
 					'author' =>
 						'<p class="comment-form-author">
-							<label for="author">Name <span>*</span></label>
+							<label for="author">Name<span>*</span></label>
 							<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . ' />
 						</p>',
 
 					'email' =>
 						'<p class="comment-form-email">
-							<label for="email">Email <span>*</span></label>
+							<label for="email">Email<span>*</span></label>
 							<input id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30"' . $aria_req . ' />
 						</p></div>'
 
@@ -114,7 +114,7 @@ if ( post_password_required() ) {
 					'title_reply'        => 'leave a reply',
 					'title_reply_after'  => '</h2>',
 					'comment_field' 	 => '<p class="comment_form_comment">
-												<label for="comment">Comment <span>*</span></label>
+												<label for="comment">Comment<span>*</span></label>
 		    									<textarea id="comment" name="comment" aria-required="true"></textarea>
 		    								</p>',
 		    		'comment_notes_after' => '<div class="respond-inputs">',

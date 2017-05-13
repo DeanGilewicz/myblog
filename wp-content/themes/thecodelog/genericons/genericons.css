@@ -38,7 +38,8 @@
 
 .genericon {
 	font-size: 16px;
-	vertical-align: top;
+	/*vertical-align: top;*/
+	vertical-align: middle;
 	text-align: center;
 	-moz-transition: color .1s ease-in 0;
 	-webkit-transition: color .1s ease-in 0;
