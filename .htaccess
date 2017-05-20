@@ -1,5 +1,7 @@
 # BEGIN WordPress
 
+<IfModule mod_rewrite.c>
+
 RewriteEngine On
 RewriteBase /
 RewriteRule ^index\.php$ - [L]
@@ -12,5 +14,7 @@ RewriteRule . /index.php [L]
 
 #RewriteCond %{HTTP_HOST} ^thecodelog.com [nocase]
 #RewriteRule ^(.*) https://www.thecodelog.com/$1 [last,redirect=301]
+
+</IfModule>
 
 # END WordPress
