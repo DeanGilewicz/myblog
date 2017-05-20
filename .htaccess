@@ -1,11 +1,16 @@
 # BEGIN WordPress
-<IfModule mod_rewrite.c>
+
 RewriteEngine On
 RewriteBase /
 RewriteRule ^index\.php$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule . /index.php [L]
-</IfModule>
+
+#RewriteCond %{SERVER_PORT} 80
+#RewriteRule ^(.*)$ https://www.thecodelog.com/$1 [R=301,L]
+
+#RewriteCond %{HTTP_HOST} ^thecodelog.com [nocase]
+#RewriteRule ^(.*) https://www.thecodelog.com/$1 [last,redirect=301]
 
 # END WordPress
