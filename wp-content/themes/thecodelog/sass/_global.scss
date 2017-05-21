@@ -106,10 +106,13 @@ textarea {
 }
 
 .search-form {
-	position: relative;
 	width: 100%;
 	padding: $base_size*1.2 $base_size*1.5;
 	box-sizing: border-box;
+}
+
+.container_search_input {
+	position: relative;
 }
 
 .search-form input {
@@ -123,8 +126,8 @@ textarea {
 .search-form button[type="submit"] {
 	outline: none;
 	position: absolute;
-	top: 12px;
-	// left: 0;
+	top: 0;
+	left: 0;
 	width: $base_size*3;
 	height: $base_size*3;
 	margin: 0;
