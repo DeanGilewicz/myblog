@@ -105,6 +105,10 @@ textarea {
 	}
 }
 
+.site_wrapper {
+	overflow: hidden;
+}
+
 .search-form {
 	width: 100%;
 	padding: $base_size*1.2 $base_size*1.5;
@@ -119,6 +123,7 @@ textarea {
 	outline: none;
 	width: 100%;
 	height: $base_size*3.1;
+	border-radius: 0;
 	padding: $base_size*0.4 $base_size*0.8 $base_size*0.4 $base_size*4;
 	font-size: $base_font_size;
 }

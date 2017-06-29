@@ -6,7 +6,7 @@
 		transform: translate3d(15.625rem, 0, 0);
 	}
 
-	@media (min-width: $medium) {
+	@media (min-width: $tablet_portrait) {
 		margin-left: 15.625rem;
 	}
 }
@@ -24,7 +24,7 @@
     transform: translate3d(-100%, 0, 0);
 	transition: transform 200ms ease-in;
 
-	@media (min-width: $medium) {
+	@media (min-width: $tablet_portrait) {
 		transform: translate3d(0, 0, 0);
 	}
 
@@ -64,6 +64,7 @@
 	.search-field ,
 	.search-submit {
 		border: 1px solid $orange;
+		border-radius: 0;
 	}
 
 }
@@ -74,7 +75,7 @@
 	background-color: $grey_brand;
 	color: $white;
 
-	@media (min-width: $medium) {
+	@media (min-width: $tablet_portrait) {
 		padding-top: $base_size*2.5;
 		padding-bottom: $base_size*2.5;
 	}
@@ -95,7 +96,7 @@
 	font-size: 28px;
 	cursor: pointer;
 
-	@media (min-width: $medium) {
+	@media (min-width: $tablet_portrait) {
 		display: none;
 	}
 
