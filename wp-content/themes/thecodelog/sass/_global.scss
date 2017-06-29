@@ -120,10 +120,11 @@ textarea {
 }
 
 .search-form input {
+	-webkit-appearance: none;
+	border-radius: 0;
 	outline: none;
 	width: 100%;
 	height: $base_size*3.1;
-	border-radius: 0;
 	padding: $base_size*0.4 $base_size*0.8 $base_size*0.4 $base_size*4;
 	font-size: $base_font_size;
 }
@@ -134,7 +135,8 @@ textarea {
 	top: 0;
 	left: 0;
 	width: $base_size*3;
-	height: $base_size*3;
+	// height: $base_size*3;
+	height: 100%;
 	margin: 0;
 	padding: 0;
 }
