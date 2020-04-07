@@ -9,7 +9,7 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	
+
 	<div class="container_post">
 
 		<div class="post_feature_img">
@@ -17,13 +17,13 @@
 			<?php $src_small  = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'medium' );?>
 			<?php $src_medium_up = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'medium_large' );?>
 			<div class="container_bg_img small">
-				<div class="bg_img" style="background-image: url('<? echo $src_small[0]; ?>')"></div>
+				<div class="bg_img" style="background-image: url('<?php echo $src_small[0]; ?>')"></div>
 			</div>
 			<div class="container_bg_img medium_up">
-				<div class="bg_img" style="background-image: url('<? echo $src_medium_up[0]; ?>')"></div>
+				<div class="bg_img" style="background-image: url('<?php echo $src_medium_up[0]; ?>')"></div>
 			</div>
 		</div>
-		
+
 		<header class="entry-header">
 
 			<div class="post_date">
@@ -36,7 +36,7 @@
 			</div>
 
 			<div class="container_post_meta">
-				
+
 				<div class="post_title">
 					<?php
 					if ( is_single() ) :
@@ -52,7 +52,7 @@
 				</div>
 
 			</div>
-			
+
 		</header><!-- .entry-header -->
 
 		<div class="entry-content">
@@ -67,7 +67,7 @@
 
 					<span class="post_cats">
 						<?php foreach ( get_the_category() as $cat ) : ?>
-							<?php 
+							<?php
 								$category_name  = $cat->cat_name;
 								$category_link  = get_category_link( $cat->cat_ID );
 							?>
@@ -78,10 +78,10 @@
 						<?php endforeach; ?>
 					</span>
 
-					<span class="post_comments">
+					<!-- <span class="post_comments">
 						<i class="genericon genericon-comment"></i>
 						<a href="<?php echo get_comments_link( $post->ID ); ?>"><?php comments_number(); ?></a>
-					</span>
+					</span> -->
 
 				</div>
 
@@ -108,19 +108,19 @@
 		</div><!-- .entry-content -->
 
 		<footer class="entry-footer">
-			<?php 
-				
-				// Get current page URL 
+			<?php
+
+				// Get current page URL
 				$thecodelogURL = urlencode( get_permalink() );
-		 
+
 				// Get current page title
 				$thecodelogTitle = str_replace( ' ', '%20', get_the_title() );
-						 
+
 				// Construct sharing URL without using any script
 				$twitterURL  = 'https://twitter.com/intent/tweet?text='.$thecodelogTitle.'&amp;url='.$thecodelogURL.'&amp;via=thecodelog';
 				$facebookURL = 'https://www.facebook.com/sharer/sharer.php?u='.$thecodelogURL;
 				$linkedInURL = 'https://www.linkedin.com/shareArticle?mini=true&url='.$thecodelogURL.'&amp;title='.$thecodelogTitle;
-		 		 
+
 				// Create sharing buttons
 				$socialLinks  = '';
 				$socialLinks .= '<div class="container_thecodelog_social">';
@@ -128,13 +128,13 @@
 				$socialLinks .= '<a class="thecodelog_link thecodelog_facebook" href="'.$facebookURL.'" target="_blank">Facebook</a>';
 				$socialLinks .= '<a class="thecodelog_link thecodelog_linkedin" href="'.$linkedInURL.'" target="_blank">LinkedIn</a>';
 				$socialLinks .= '</div>';
-				
+
 				// Display in template
-				echo $socialLinks; 
+				echo $socialLinks;
 			?>
 
 			<!-- <?php edit_post_link( __( 'Edit', 'thecodelog' ), '<span class="edit-link">', '</span>' ); ?> -->
-		
+
 		</footer><!-- .entry-footer -->
 
 	</div>

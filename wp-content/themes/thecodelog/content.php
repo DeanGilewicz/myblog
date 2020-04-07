@@ -11,9 +11,9 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	
+
 	<div class="container_post">
-		
+
 		<header class="entry-header">
 
 			<div class="post_date">
@@ -26,7 +26,7 @@
 			</div>
 
 			<div class="container_post_meta">
-				
+
 				<div class="post_title">
 					<?php
 					if ( is_single() ) :
@@ -42,7 +42,7 @@
 				</div>
 
 			</div>
-			
+
 		</header><!-- .entry-header -->
 
 		<div class="post_feature_img">
@@ -50,10 +50,10 @@
 			<?php $src_small  = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'medium' );?>
 			<?php $src_medium_up = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'medium_large' );?>
 			<div class="container_bg_img small">
-				<div class="bg_img" style="background-image: url('<? echo $src_small[0]; ?>')"></div>
+				<div class="bg_img" style="background-image: url('<?php echo $src_small[0]; ?>')"></div>
 			</div>
 			<div class="container_bg_img medium_up">
-				<div class="bg_img" style="background-image: url('<? echo $src_medium_up[0]; ?>')"></div>
+				<div class="bg_img" style="background-image: url('<?php echo $src_medium_up[0]; ?>')"></div>
 			</div>
 		</div>
 
@@ -88,10 +88,10 @@
 			</div>
 
 			<div class="container_cats_comments table_cell">
-				
+
 				<span class="post_cats">
 					<?php foreach ( get_the_category() as $cat ) : ?>
-						<?php 
+						<?php
 							$category_name  = $cat->cat_name;
 							$category_link  = get_category_link( $cat->cat_ID );
 						?>
@@ -102,15 +102,15 @@
 					<?php endforeach; ?>
 				</span>
 
-				<span class="post_comments">
+				<!-- <span class="post_comments">
 					<i class="genericon genericon-comment"></i>
 					<a href="<?php echo get_comments_link( $post->ID ); ?>"><?php comments_number(); ?></a>
-				</span>
+				</span> -->
 
 			</div>
 
 			<!-- <?php edit_post_link( __( 'Edit', 'thecodelog' ), '<span class="edit-link">', '</span>' ); ?> -->
-		
+
 		</footer><!-- .entry-footer -->
 
 	</div>
