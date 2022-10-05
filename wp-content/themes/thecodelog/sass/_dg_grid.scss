@@ -1,74 +1,73 @@
 .dg_grid_container {
-  width: 100%; 
-  max-width: 800px; // default 1200px
-  margin-right: auto;
-  margin-left: auto;
+	width: 100%;
+	max-width: 800px; // default 1200px
+	margin-right: auto;
+	margin-left: auto;
 }
 
 .dg_grid_row:after {
-  content: '';
-  display: table;
-  clear: both;
+	content: "";
+	display: table;
+	clear: both;
 }
 
 .dg_grid_col {
-  float: left; 
-  min-height: 1px;
-  padding-left: 12px;
-  padding-right: 12px;
-  box-sizing: border-box;
+	float: left;
+	min-height: 1px;
+	padding-left: 12px;
+	padding-right: 12px;
+	box-sizing: border-box;
 
-  @media (min-width: 641px) {
-    padding-left: 16px;
-    padding-right: 16px;
-  }
-
+	@media (min-width: 641px) {
+		padding-left: 16px;
+		padding-right: 16px;
+	}
 }
 
 .dg_grid_col[class*="col_1"] {
-   width: 8.33333333%;
+	width: 8.33333333%;
 }
 
 .dg_grid_col[class*="col_2"] {
-   width: 16.66666666%;
+	width: 16.66666666%;
 }
 
 .dg_grid_col[class*="col_3"] {
-   width: 24.99999999%;
+	width: 24.99999999%;
 }
 
 .dg_grid_col[class*="col_4"] {
-   width: 33.33333333%;
+	width: 33.33333333%;
 }
 
 .dg_grid_col[class*="col_5"] {
-   width: 41.66666666%;
+	width: 41.66666666%;
 }
 
 .dg_grid_col[class*="col_6"] {
-   width: 50%;
+	width: 50%;
 }
 
 .dg_grid_col[class*="col_7"] {
-   width: 58.33333333%;
+	width: 58.33333333%;
 }
 
 .dg_grid_col[class*="col_8"] {
-   width: 66.66666666%;
+	width: 66.66666666%;
 }
 
 .dg_grid_col[class*="col_9"] {
-   width: 74.99999999%;
+	width: 74.99999999%;
 }
 
 .dg_grid_col[class*="col_10"] {
-   width: 83.33333333%;
+	width: 83.33333333%;
 }
 
 .dg_grid_col[class*="col_11"] {
-   width: 91.66666666%;
+	width: 91.66666666%;
 }
 
 .dg_grid_col[class*="col_12"] {
-   width: 100%;
+	width: 100%;
 }

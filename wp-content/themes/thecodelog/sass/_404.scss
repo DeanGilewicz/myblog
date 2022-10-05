@@ -1,8 +1,7 @@
 body.error404 {
-
 	.container_main_content {
-		padding-top: $base_size*2;
-		padding-bottom: $base_size*2;
+		padding-top: $base_size * 2;
+		padding-bottom: $base_size * 2;
 	}
 
 	.page-title {
@@ -12,29 +11,26 @@ body.error404 {
 	}
 
 	.container_not_found_content {
-		margin-bottom: $base_size*2;
+		margin-bottom: $base_size * 2;
 		padding: $base_size;
 		border: 1px solid darken($grey_light, 5%);
 		background-color: $white;
 	}
 
 	.container_search {
-		margin-top: $base_size*4;
-		margin-bottom: $base_size*2;
+		margin-top: $base_size * 4;
+		margin-bottom: $base_size * 2;
 		border: 1px solid darken($grey_light, 5%);
 		background-color: $white;
 
 		.search-form {
-			padding: $base_size*1.2 $base_size;
-		
+			padding: $base_size * 1.2 $base_size;
+
 			input {
 				border: none;
 				background-color: $grey_light;
 				border-radius: 0;
 			}
-
 		}
-
-	} 
-
+	}
 }

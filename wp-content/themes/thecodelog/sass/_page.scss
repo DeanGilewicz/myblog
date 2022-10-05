@@ -1,8 +1,7 @@
 body.page {
-
 	.container_main_content {
-		padding-top: $base_size*2;
-		padding-bottom: $base_size*2;
+		padding-top: $base_size * 2;
+		padding-bottom: $base_size * 2;
 	}
 
 	.entry-title {
@@ -16,5 +15,4 @@ body.page {
 		border: 1px solid darken($grey_light, 5%);
 		background-color: $white;
 	}
-
 }

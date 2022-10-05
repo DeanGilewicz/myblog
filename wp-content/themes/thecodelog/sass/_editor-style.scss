@@ -3,7 +3,6 @@ Theme Name: thecodelog
 Description: Used to style the TinyMCE editor.
 */
 
-
 /**
  * Table of Contents:
  *
@@ -16,7 +15,6 @@ Description: Used to style the TinyMCE editor.
  * 7.0 - Audio / Video
  * 8.0 - RTL
  */
-
 
 /**
  * 1.0 Body
@@ -32,7 +30,6 @@ body {
 	max-width: 660px;
 	vertical-align: baseline;
 }
-
 
 /**
  * 2.0 Typography
@@ -196,7 +193,7 @@ sup {
 }
 
 sub {
-	top: .5ex;
+	top: 0.5ex;
 }
 
 small {
@@ -206,7 +203,6 @@ small {
 big {
 	font-size: 125%;
 }
-
 
 /**
  * 3.0 Elements
@@ -319,7 +315,6 @@ a {
 	text-decoration: none;
 }
 
-
 /**
  * 4.0 Alignment
  */
@@ -339,7 +334,6 @@ a {
 	display: block;
 	margin: 7px auto;
 }
-
 
 /**
  * 5.0 Caption
@@ -374,7 +368,6 @@ a {
 	line-height: 1.5;
 	padding: 7px 0;
 }
-
 
 /**
  * 6.0 Galleries
@@ -436,7 +429,6 @@ a {
 	display: none;
 }
 
-
 /**
  * 7.0 Audio / Video
  */
@@ -448,7 +440,6 @@ a {
 .mce-content-body .wp-audio-playlist {
 	margin: 0;
 }
-
 
 /**
  * 8.0 RTL

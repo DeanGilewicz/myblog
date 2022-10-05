@@ -801,7 +801,6 @@ video {
 	margin: 0 0 0.421em;
 }
 
-
 /**
  * RTL
  */
@@ -860,8 +859,7 @@ video {
 }
 
 .rtl blockquote.alignright,
-.rtl .wp-caption.alignright
-.rtl img.alignright {
+.rtl .wp-caption.alignright .rtl img.alignright {
 	margin: 0.4211em 0 1.6842em 1.6842em;
 }
 

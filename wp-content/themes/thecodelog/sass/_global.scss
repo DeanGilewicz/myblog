@@ -8,7 +8,7 @@ body {
 	color: $text;
 
 	@media (min-width: $medium) {
-		font-size: $base_font_size*1.2;
+		font-size: $base_font_size * 1.2;
 	}
 }
 
@@ -20,7 +20,7 @@ span {
 	font-size: $base_font_size;
 
 	@media (min-width: $medium) {
-		font-size: $base_font_size*1.1;
+		font-size: $base_font_size * 1.1;
 	}
 }
 
@@ -28,7 +28,7 @@ p {
 	font-size: $base_font_size;
 
 	@media (min-width: $medium) {
-		font-size: $base_font_size*1.1;
+		font-size: $base_font_size * 1.1;
 	}
 }
 
@@ -42,7 +42,7 @@ h6 {
 }
 
 a {
-	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 	-webkit-tap-highlight-color: transparent;
 	color: $link;
 	cursor: pointer;
@@ -53,11 +53,10 @@ a {
 	&:hover {
 		color: lighten($link, 10%);
 	}
-
 }
 
 img {
-	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 	-webkit-tap-highlight-color: transparent;
 }
 
@@ -67,7 +66,6 @@ select,
 textarea {
 	font-family: $font_roboto_mono;
 }
-
 
 .clearfix:before,
 .clearfix:after {
@@ -83,10 +81,10 @@ textarea {
 	text-decoration: none;
 	display: inline-block;
 	margin: $base_size 0;
-	padding: $base_size $base_size*1.2;
+	padding: $base_size $base_size * 1.2;
 	border: 1px solid $white;
 	text-transform: uppercase;
-	font-size: $base_font_size*0.9;
+	font-size: $base_font_size * 0.9;
 	text-align: center;
 	background-color: $orange;
 	color: $white;
@@ -94,7 +92,6 @@ textarea {
 	transition: background-color 0.4s ease;
 
 	@media (min-width: $medium) {
-		
 	}
 
 	&:hover,
@@ -111,7 +108,7 @@ textarea {
 
 .search-form {
 	width: 100%;
-	padding: $base_size*1.2 $base_size*1.5;
+	padding: $base_size * 1.2 $base_size * 1.5;
 	box-sizing: border-box;
 }
 
@@ -124,8 +121,8 @@ textarea {
 	border-radius: 0;
 	outline: none;
 	width: 100%;
-	height: $base_size*3.1;
-	padding: $base_size*0.4 $base_size*0.8 $base_size*0.4 $base_size*4;
+	height: $base_size * 3.1;
+	padding: $base_size * 0.4 $base_size * 0.8 $base_size * 0.4 $base_size * 4;
 	font-size: $base_font_size;
 }
 
@@ -134,31 +131,29 @@ textarea {
 	position: absolute;
 	top: 0;
 	left: 0;
-	width: $base_size*3;
+	width: $base_size * 3;
 	// height: $base_size*3;
 	height: 100%;
 	margin: 0;
 	padding: 0;
 }
 
-
 .nav_crumb {
-	margin-bottom: $base_size*2;
-	padding: $base_size*2;
-    border: 1px solid darken($grey_light, 5%);
-    background-color: $white;
+	margin-bottom: $base_size * 2;
+	padding: $base_size * 2;
+	border: 1px solid darken($grey_light, 5%);
+	background-color: $white;
 }
 
 .nav_crumb a,
 .nav_crumb span {
-	font-size: $base_font_size*0.8;
-    text-transform: uppercase;
+	font-size: $base_font_size * 0.8;
+	text-transform: uppercase;
 }
 
 .nav_crumb .current {
 	color: $orange;
 }
-
 
 .container_page_nav {
 	padding: $base_size;
@@ -171,24 +166,21 @@ textarea {
 
 	.page-numbers {
 		display: inline-block;
-		margin-right: $base_size*0.6;
-		padding: $base_size*0.6 $base_size*1.4;
+		margin-right: $base_size * 0.6;
+		padding: $base_size * 0.6 $base_size * 1.4;
 		background-color: $grey_light;
-		transition:
-			background-color 0.4s ease,
-			color 0.4s ease;
+		transition: background-color 0.4s ease, color 0.4s ease;
 
 		&.current,
 		&:hover {
 			background-color: $orange;
 			color: $white;
 		}
-
 	}
 }
- 
+
 .post-navigation {
-	margin-top: $base_size*2;
+	margin-top: $base_size * 2;
 	padding: $base_size;
 	border: 1px solid darken($grey_light, 5%);
 	background-color: $white;
@@ -219,20 +211,15 @@ textarea {
 	.nav-previous a,
 	.nav-next a {
 		display: inline-block;
-		padding: $base_size*0.8 $base_size*1.4;
-		font-size: $base_font_size*0.9;
+		padding: $base_size * 0.8 $base_size * 1.4;
+		font-size: $base_font_size * 0.9;
 		background-color: $grey_light;
-		transition:
-			background-color 0.4s ease,
-			color 0.4s ease;
+		transition: background-color 0.4s ease, color 0.4s ease;
 
 		&.current,
 		&:hover {
 			background-color: $orange;
 			color: $white;
 		}
-
 	}
-
 }
-
