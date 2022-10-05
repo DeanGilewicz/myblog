@@ -1,16 +1,15 @@
 body.home,
 body.search,
 body.archive {
-
 	.container_hero {
 		position: relative;
 		height: 240px;
 		background-color: $white;
-		background-image: url('/wp-content/themes/thecodelog/dist/images/hero-bg-1.jpg');
+		background-image: url("/wp-content/themes/thecodelog/dist/images/hero-bg-1.jpg");
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: center center;
-	
+
 		@media (min-width: $medium) {
 			height: 280px;
 		}
@@ -18,7 +17,6 @@ body.archive {
 		@media (min-width: $large) {
 			height: 320px;
 		}
-
 	}
 
 	.overlay {
@@ -28,46 +26,44 @@ body.archive {
 		right: 0;
 		bottom: 0;
 		background: darken($grey_light, 20%);
-		background: rgba(0,0,0, 0.4);
+		background: rgba(0, 0, 0, 0.4);
 	}
 
 	.hero_content {
 		position: absolute;
-    	top: 50%;
-    	transform: translateY(-50%);
+		top: 50%;
+		transform: translateY(-50%);
 		max-width: 800px;
 
-		h1, p {
+		h1,
+		p {
 			color: $white;
 		}
 
 		h1 {
-			font-size: $base_font_size*2;
+			font-size: $base_font_size * 2;
 
 			@media (min-width: $medium) {
-				font-size: $base_font_size*2.3;
+				font-size: $base_font_size * 2.3;
 			}
 
 			@media (min-width: $large) {
-				font-size: $base_font_size*2.6;
+				font-size: $base_font_size * 2.6;
 			}
-
 		}
 
 		p {
-			font-size: $base_font_size*1.3;
+			font-size: $base_font_size * 1.3;
 			line-height: 1.5;
 
 			@media (min-width: $medium) {
-				font-size: $base_font_size*1.4;
+				font-size: $base_font_size * 1.4;
 			}
 
 			@media (min-width: $large) {
-				font-size: $base_font_size*1.8;
+				font-size: $base_font_size * 1.8;
 			}
-
 		}
-
 	}
 
 	.page-title.search_term {
@@ -77,12 +73,12 @@ body.archive {
 	}
 
 	.container_main_content {
-		padding-top: $base_size*2;
-		padding-bottom: $base_size*2;
+		padding-top: $base_size * 2;
+		padding-bottom: $base_size * 2;
 	}
 
 	.container_not_found_content {
-		margin-bottom: $base_size*2;
+		margin-bottom: $base_size * 2;
 		padding: $base_size;
 		border: 1px solid darken($grey_light, 5%);
 		background-color: $white;
@@ -98,7 +94,7 @@ body.archive {
 			margin-bottom: $base_size;
 			padding-top: 0;
 			padding-bottom: 0;
-    		border: 1px solid darken($grey_light, 5%);
+			border: 1px solid darken($grey_light, 5%);
 		}
 	}
 
@@ -118,13 +114,13 @@ body.archive {
 	}
 
 	article .container_post {
-		margin-bottom: $base_size*2;
+		margin-bottom: $base_size * 2;
 		border: 1px solid darken($grey_light, 5%);
 		background-color: $white;
-	
+
 		.post_date {
 			padding-top: $base_size;
-			padding-bottom: $base_size*2;
+			padding-bottom: $base_size * 2;
 			border-bottom: 1px solid darken($grey_light, 5%);
 			text-transform: uppercase;
 			text-align: center;
@@ -132,7 +128,7 @@ body.archive {
 			@media (min-width: $medium) {
 				display: table-cell;
 				width: 22%;
-				max-width: $base_size*9;
+				max-width: $base_size * 9;
 				padding: $base_size;
 				border-right: 1px solid darken($grey_light, 5%);
 				border-bottom: none;
@@ -147,21 +143,20 @@ body.archive {
 
 				&:first-child {
 					display: block;
-					font-size: $base_font_size*1.8;
+					font-size: $base_font_size * 1.8;
 					font-weight: 700;
 				}
 			}
 
 			p {
-				margin: $base_size*0.6 0 0;
-				font-size: $base_font_size*0.8;
+				margin: $base_size * 0.6 0 0;
+				font-size: $base_font_size * 0.8;
 
 				i {
-					font-size: $base_font_size*1.1;
-				    vertical-align: middle;
+					font-size: $base_font_size * 1.1;
+					vertical-align: middle;
 				}
 			}
-
 		}
 
 		.container_post_meta {
@@ -175,7 +170,7 @@ body.archive {
 		}
 
 		.post_title {
-			margin: $base_size*2 0 $base_size;
+			margin: $base_size * 2 0 $base_size;
 
 			@media (min-width: $medium) {
 				display: inline-block;
@@ -187,9 +182,8 @@ body.archive {
 			}
 
 			a {
-				font-size: $base_font_size*1.6;
+				font-size: $base_font_size * 1.6;
 			}
-
 		}
 
 		.post_author {
@@ -201,13 +195,12 @@ body.archive {
 			}
 
 			span {
-				font-size: $base_font_size*0.9;
+				font-size: $base_font_size * 0.9;
 			}
 
 			span > span {
 				color: $orange;
 			}
-
 		}
 
 		.post_feature_img {
@@ -226,7 +219,7 @@ body.archive {
 				height: 100%;
 				background-repeat: no-repeat;
 				background-size: cover;
-				background-position: center center
+				background-position: center center;
 			}
 
 			.container_bg_img {
@@ -242,13 +235,11 @@ body.archive {
 
 			.container_bg_img.medium_up {
 				display: none;
-				
+
 				@media (min-width: $medium) {
 					display: block;
 				}
-
 			}
-
 		}
 
 		.entry-content {
@@ -256,7 +247,7 @@ body.archive {
 		}
 
 		.post_type .genericon-pinned {
-			font-size: $base_font_size*1.5;
+			font-size: $base_font_size * 1.5;
 			padding: 4px;
 			border: 1px solid $orange;
 			border-radius: 50%;
@@ -268,7 +259,7 @@ body.archive {
 			display: block;
 
 			a {
-				font-size: $base_font_size*0.9;
+				font-size: $base_font_size * 0.9;
 			}
 		}
 
@@ -287,26 +278,22 @@ body.archive {
 		.table .table_cell:last-child {
 			text-align: right;
 		}
-
 	}
 
 	.container_search {
-		margin-top: $base_size*4;
-		margin-bottom: $base_size*2;
+		margin-top: $base_size * 4;
+		margin-bottom: $base_size * 2;
 		border: 1px solid darken($grey_light, 5%);
 		background-color: $white;
 
 		.search-form {
-			padding: $base_size*1.2 $base_size;
-		
+			padding: $base_size * 1.2 $base_size;
+
 			input {
 				border: none;
 				border-radius: 0;
 				background-color: $grey_light;
 			}
-
 		}
-
-	} 
-
+	}
 }

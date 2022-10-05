@@ -1,7 +1,6 @@
 .comments-area {
-
 	textarea {
-	    min-height: 100px;
+		min-height: 100px;
 	}
 
 	textarea,
@@ -17,7 +16,7 @@
 
 	label {
 		display: block;
-		font-size: $base_font_size*0.8;
+		font-size: $base_font_size * 0.8;
 		text-transform: uppercase;
 
 		span {
@@ -28,24 +27,23 @@
 
 	input[type="submit"] {
 		background-color: $orange;
-		
+
 		&:hover,
 		&:active,
 		&:focus {
 			background-color: $black;
 			color: $white;
 		}
-
 	}
 
 	.dg_grid_row {
-		padding-top: $base_size*2;
-		padding-bottom: $base_size*2;
+		padding-top: $base_size * 2;
+		padding-bottom: $base_size * 2;
 		background-color: $white;
 		border: 1px solid darken($grey_light, 5%);
 
 		&:last-of-type {
-			margin-top: $base_size*2;
+			margin-top: $base_size * 2;
 		}
 	}
 
@@ -74,11 +72,10 @@
 
 	.comment-notes,
 	.comment-notes span {
-		font-size: $base_font_size*0.8;
+		font-size: $base_font_size * 0.8;
 	}
 
 	.form-submit {
 		margin-bottom: 2px;
 	}
-
 }

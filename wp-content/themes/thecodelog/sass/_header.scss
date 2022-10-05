@@ -18,10 +18,10 @@
 	z-index: 5;
 	width: 15.625rem;
 	height: 100%;
-	padding-top: $base_size*2;
-	padding-bottom: $base_size*2;
+	padding-top: $base_size * 2;
+	padding-bottom: $base_size * 2;
 	background-color: $black;
-    transform: translate3d(-100%, 0, 0);
+	transform: translate3d(-100%, 0, 0);
 	transition: transform 200ms ease-in;
 
 	@media (min-width: $tablet_portrait) {
@@ -30,55 +30,53 @@
 
 	ul {
 		list-style: none;
-	    width: 100%;
-	    height: 100%;
-	    margin: 0;
-	    padding: $base_size*2 0;
-	    overflow: hidden;
-	    text-transform: uppercase;
+		width: 100%;
+		height: 100%;
+		margin: 0;
+		padding: $base_size * 2 0;
+		overflow: hidden;
+		text-transform: uppercase;
 	}
 
 	li {
-	    margin: 0;
+		margin: 0;
 
-	    &.current-cat a {
-	    	color: $orange;
-	    }
+		&.current-cat a {
+			color: $orange;
+		}
 	}
 
 	a {
 		text-decoration: none;
 		display: block;
-		padding: $base_size*1.2 $base_size*1.5;
+		padding: $base_size * 1.2 $base_size * 1.5;
 		border-bottom: 1px solid lighten($black, 30%);
 		// letter-spacing: 2px;
 		// font-weight: 300;
 		font-size: $base_font_size;
-		color: $white; 
+		color: $white;
 	}
 
 	a:hover {
-	    background-color: lighten($black, 10%);
+		background-color: lighten($black, 10%);
 	}
 
-	.search-field ,
+	.search-field,
 	.search-submit {
 		border: 1px solid $orange;
 	}
-
 }
 
 .container_main_header {
-	padding-top: $base_size*7.5;
-	padding-bottom: $base_size*2.5;
+	padding-top: $base_size * 7.5;
+	padding-bottom: $base_size * 2.5;
 	background-color: $grey_brand;
 	color: $white;
 
 	@media (min-width: $tablet_portrait) {
-		padding-top: $base_size*2.5;
-		padding-bottom: $base_size*2.5;
+		padding-top: $base_size * 2.5;
+		padding-bottom: $base_size * 2.5;
 	}
-
 }
 
 .container_js_trigger_menu {
@@ -98,13 +96,12 @@
 	@media (min-width: $tablet_portrait) {
 		display: none;
 	}
-
 }
 
 .logo_site {
 	display: block;
 	margin: 0 auto;
-	font-size: $base_font_size*1.2;
+	font-size: $base_font_size * 1.2;
 	text-transform: uppercase;
 	color: $white;
 	text-align: center;
@@ -130,11 +127,9 @@
 	.medium {
 		display: none;
 		max-width: 540px;
-		
+
 		@media (min-width: 480px) {
 			display: block;
 		}
 	}
-	
-
 }
